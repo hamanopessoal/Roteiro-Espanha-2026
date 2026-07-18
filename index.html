@@ -195,7 +195,95 @@
     .divider { border: none; height: 1px; background: linear-gradient(to right, transparent, #ddd, transparent); margin: 28px 0; }
     .city-sub { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin: 26px 0 14px; display: flex; align-items: center; gap: 8px; }
     .city-sub.m { color: var(--madrid); } .city-sub.v { color: var(--valencia); } .city-sub.b { color: var(--barcelona); }
-    @media(max-width:680px) { .hero h1 { font-size: 1.9rem; } .g-grid { grid-template-columns: 1fr; } .tl-time { width: 50px; } }
+    /* ===== COLLAPSE ===== */
+    .day-hd { cursor: pointer; user-select: none; }
+    .day-hd .collapse-arrow { margin-left: auto; font-size: 1rem; transition: transform .3s; flex-shrink: 0; opacity: .8; }
+    .day-card.collapsed .collapse-arrow { transform: rotate(-90deg); }
+    .day-body { transition: none; }
+    .day-card.collapsed .day-body { display: none; }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px) {
+      .container { padding: 16px 12px 50px; }
+      .hero { padding: 36px 16px 30px; }
+      .hero h1 { font-size: 1.7rem; }
+      .hero p { font-size: .9rem; }
+      .sum-pill .n { font-size: 1.2rem; }
+      .sum-pill { padding: 8px 14px; }
+      .summary-strip { gap: 8px; }
+
+      .nav-bar { gap: 5px; padding: 8px 10px; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .nav-bar::-webkit-scrollbar { display: none; }
+      .ntab { padding: 7px 13px; font-size: .78rem; white-space: nowrap; flex-shrink: 0; }
+
+      .city-hd { padding: 16px 18px; gap: 12px; }
+      .city-hd .ico { font-size: 2rem; }
+      .city-hd h2 { font-size: 1.5rem; }
+
+      .day-hd { padding: 12px 14px; gap: 10px; }
+      .day-hd h3 { font-size: .9rem; }
+      .day-num { width: 36px; height: 36px; font-size: .88rem; }
+      .cost-badge { font-size: .72rem; padding: 4px 10px; }
+
+      .route-map { padding: 12px 14px 10px; gap: 0; }
+      .rm-node { min-width: 56px; }
+      .rm-nm { font-size: .66rem; max-width: 56px; }
+      .rm-ico { font-size: 1.1rem; }
+      .rm-arr { min-width: 28px; }
+      .rm-arr-line { width: 24px; }
+      .rm-dist { font-size: .58rem; }
+
+      .tl { padding: 14px 12px 6px; }
+      .tl-row { gap: 10px; margin-bottom: 14px; }
+      .tl-row:not(:last-child)::after { left: 59px; }
+      .tl-time { width: 48px; font-size: .73rem; }
+      .tl-info { padding: 10px 12px; }
+      .tl-name { font-size: .88rem; }
+      .tag { font-size: .72rem; padding: 3px 8px; }
+
+      .cafe-sug, .shop-sug { font-size: .78rem; padding: 8px 11px; }
+
+      .day-cost { padding: 10px 14px; font-size: .77rem; }
+
+      .g-grid { grid-template-columns: 1fr; }
+      .grand-box { padding: 20px 16px; }
+      .grand-total-val { font-size: 1.6rem; }
+
+      .r-grid { grid-template-columns: 1fr; }
+      .cf-grid { grid-template-columns: 1fr; }
+      .dk-cards { grid-template-columns: 1fr; }
+      .hotel-grid { grid-template-columns: 1fr; }
+      .train-grid { grid-template-columns: 1fr 1fr; }
+      .flight-grid { grid-template-columns: 1fr; }
+
+      .cost-table { font-size: .78rem; }
+      .cost-table th, .cost-table td { padding: 8px 8px; }
+
+      .rv-timeline { border-radius: 10px; }
+      .rv-seg { padding: 10px 6px; font-size: .68rem; }
+      .rv-spots { gap: 4px; }
+      .rv-spot { font-size: .7rem; padding: 2px 8px; }
+      .rv-day-label { min-width: 90px; font-size: .7rem; }
+
+      .logi-hero { padding: 20px 18px; }
+      .ck-nav { flex-direction: column; gap: 8px; }
+      .ck-nav-btn { padding: 12px; font-size: .85rem; }
+      .ck-label { font-size: .8rem; }
+
+      .dk-city-hd { padding: 12px 16px; }
+      .dk-city-hd h3 { font-size: 1.15rem; }
+      .hoho-routes { flex-direction: column; }
+      .sec-title { font-size: 1.4rem; }
+    }
+
+    @media(max-width:420px) {
+      .hero h1 { font-size: 1.4rem; }
+      .tl-time { width: 40px; font-size: .68rem; }
+      .tl-row:not(:last-child)::after { left: 51px; }
+      .train-grid { grid-template-columns: 1fr; }
+      .rv-timeline { flex-wrap: wrap; }
+      .rv-seg { flex: 1 1 30%; }
+    }
 
     /* ===== LOGISTICS / VOOS & HOTÉIS ===== */
     .ntab.lg { background: #eaf7f0; color: #1a6b4a; }
@@ -3258,6 +3346,32 @@
 
   // Initialize on page load
   document.addEventListener('DOMContentLoaded', ckUpdateAll);
+
+  // ===== COLLAPSE DAY CARDS =====
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.day-card').forEach(function(card) {
+      var hd = card.querySelector('.day-hd');
+      if (!hd) return;
+
+      // Add collapse arrow
+      var arrow = document.createElement('span');
+      arrow.className = 'collapse-arrow';
+      arrow.textContent = '▾';
+      hd.appendChild(arrow);
+
+      // Wrap everything after day-hd in day-body
+      var body = document.createElement('div');
+      body.className = 'day-body';
+      var children = Array.from(card.children).slice(1);
+      children.forEach(function(el) { body.appendChild(el); });
+      card.appendChild(body);
+
+      // Toggle on click
+      hd.addEventListener('click', function() {
+        card.classList.toggle('collapsed');
+      });
+    });
+  });
 </script>
 </body>
 </html>
