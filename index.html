@@ -245,13 +245,13 @@
       .rm-arr-line { width: 20px; }
       .rm-dist { font-size: .55rem; }
 
-      /* Timeline — hora em cima, conteúdo abaixo, bolinha mantida */
+      /* Timeline mobile — layout horizontal compacto, hora acima do conteúdo */
       .tl { padding: 12px 10px 6px; }
-      .tl-row { flex-direction: column; gap: 0; margin-bottom: 14px; padding-left: 22px; position: relative; }
-      .tl-row:not(:last-child)::after { left: 3px; top: 22px; bottom: -8px; width: 2px; height: auto; }
-      .tl-time { width: auto; text-align: left; font-size: .72rem; padding-top: 0; padding-bottom: 2px; color: #999; }
-      .tl-dot { position: absolute; left: -5px; top: 16px; margin-top: 0; width: 10px; height: 10px; }
-      .tl-info { padding: 8px 10px; margin-top: 4px; }
+      .tl-row { display: grid; grid-template-columns: 38px 10px 1fr; grid-template-rows: auto; gap: 0 6px; margin-bottom: 14px; align-items: start; }
+      .tl-row:not(:last-child)::after { left: 42px; top: 12px; bottom: -8px; width: 2px; }
+      .tl-time { width: 38px; text-align: right; font-size: .7rem; padding-top: 8px; grid-column: 1; grid-row: 1; }
+      .tl-dot { grid-column: 2; grid-row: 1; margin-top: 11px; width: 10px; height: 10px; }
+      .tl-info { grid-column: 3; grid-row: 1; padding: 8px 10px; }
       .tl-name { font-size: .84rem; margin-bottom: 5px; }
       .tag { font-size: .7rem; padding: 2px 7px; }
       .transit-from { font-size: .68rem; padding: 2px 9px; }
@@ -311,8 +311,9 @@
 
     @media(max-width:400px) {
       .hero h1 { font-size: 1.3rem; }
-      .tl-time { width: 38px; font-size: .66rem; }
-      .tl-row:not(:last-child)::after { left: 49px; }
+      .tl-row { grid-template-columns: 32px 10px 1fr; }
+      .tl-time { width: 32px; font-size: .64rem; }
+      .tl-row:not(:last-child)::after { left: 36px; }
       .train-grid { grid-template-columns: 1fr; }
       .day-hd h3 { font-size: .8rem; }
       .cost-badge { display: none; }
@@ -509,7 +510,7 @@
 <body>
 
 <div style="background:#1c2541;color:#aaa;text-align:center;font-size:.75rem;padding:6px;letter-spacing:.3px;">
-  🔄 Última atualização: <strong style="color:#fff;">18/07/2026 às 18h36</strong>
+  🔄 Última atualização: <strong style="color:#fff;">18/07/2026 às 18h38</strong>
 </div>
 <div class="hero">
   <h1>🇪🇸 Espanha — Setembro 2026</h1>
