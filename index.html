@@ -14,7 +14,8 @@
       --gold: #f39c12; --green: #27ae60;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--light); line-height: 1.6; }
+    body { font-family: 'Poppins', sans-serif; color: var(--text); background: var(--light); line-height: 1.6; overflow-x: hidden; }
+    html { overflow-x: hidden; }
 
     /* ===== HERO ===== */
     .hero {
@@ -204,85 +205,116 @@
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px) {
-      .container { padding: 16px 12px 50px; }
-      .hero { padding: 36px 16px 30px; }
-      .hero h1 { font-size: 1.7rem; }
-      .hero p { font-size: .9rem; }
-      .sum-pill .n { font-size: 1.2rem; }
-      .sum-pill { padding: 8px 14px; }
-      .summary-strip { gap: 8px; }
+      .container { padding: 14px 10px 50px; max-width: 100vw; }
+      .hero { padding: 30px 14px 26px; }
+      .hero h1 { font-size: 1.55rem; }
+      .hero p { font-size: .86rem; }
+      .hero::before { font-size: 160px; }
+      .sum-pill .n { font-size: 1.1rem; }
+      .sum-pill { padding: 7px 12px; }
+      .summary-strip { gap: 6px; }
 
+      /* Nav scrollável */
       .nav-bar { gap: 5px; padding: 8px 10px; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
       .nav-bar::-webkit-scrollbar { display: none; }
-      .ntab { padding: 7px 13px; font-size: .78rem; white-space: nowrap; flex-shrink: 0; }
+      .ntab { padding: 7px 12px; font-size: .76rem; white-space: nowrap; flex-shrink: 0; }
 
-      .city-hd { padding: 16px 18px; gap: 12px; }
-      .city-hd .ico { font-size: 2rem; }
-      .city-hd h2 { font-size: 1.5rem; }
+      /* City header */
+      .city-hd { padding: 14px 16px; gap: 10px; margin-bottom: 16px; }
+      .city-hd .ico { font-size: 1.8rem; }
+      .city-hd h2 { font-size: 1.3rem; }
+      .city-hd .sub { font-size: .76rem; }
 
-      .day-hd { padding: 12px 14px; gap: 10px; }
-      .day-hd h3 { font-size: .9rem; }
-      .day-num { width: 36px; height: 36px; font-size: .88rem; }
-      .cost-badge { font-size: .72rem; padding: 4px 10px; }
+      /* Day card */
+      .day-card { margin-bottom: 14px; }
+      .day-hd { padding: 11px 12px; gap: 8px; }
+      .day-hd h3 { font-size: .86rem; line-height: 1.3; }
+      .day-hd .dd { font-size: .74rem; }
+      .day-num { width: 32px; height: 32px; font-size: .82rem; }
+      .cost-badge { font-size: .68rem; padding: 3px 8px; max-width: 90px; }
+      .cost-badge .rbrl { font-size: .64rem; }
 
-      .route-map { padding: 12px 14px 10px; gap: 0; }
-      .rm-node { min-width: 56px; }
-      .rm-nm { font-size: .66rem; max-width: 56px; }
-      .rm-ico { font-size: 1.1rem; }
-      .rm-arr { min-width: 28px; }
-      .rm-arr-line { width: 24px; }
-      .rm-dist { font-size: .58rem; }
+      /* Mapa de rota — scroll horizontal */
+      .route-map { flex-wrap: nowrap; overflow-x: auto; padding: 10px 12px 8px; -webkit-overflow-scrolling: touch; }
+      .rm-node { min-width: 52px; }
+      .rm-nm { font-size: .62rem; max-width: 52px; }
+      .rm-ico { font-size: 1rem; }
+      .rm-time { font-size: .6rem; }
+      .rm-arr { min-width: 24px; }
+      .rm-arr-line { width: 20px; }
+      .rm-dist { font-size: .55rem; }
 
-      .tl { padding: 14px 12px 6px; }
-      .tl-row { gap: 10px; margin-bottom: 14px; }
-      .tl-row:not(:last-child)::after { left: 59px; }
-      .tl-time { width: 48px; font-size: .73rem; }
-      .tl-info { padding: 10px 12px; }
-      .tl-name { font-size: .88rem; }
-      .tag { font-size: .72rem; padding: 3px 8px; }
+      /* Timeline — hora em cima, conteúdo abaixo, bolinha mantida */
+      .tl { padding: 12px 10px 6px; }
+      .tl-row { flex-direction: column; gap: 0; margin-bottom: 14px; padding-left: 22px; position: relative; }
+      .tl-row:not(:last-child)::after { left: 3px; top: 22px; bottom: -8px; width: 2px; height: auto; }
+      .tl-time { width: auto; text-align: left; font-size: .72rem; padding-top: 0; padding-bottom: 2px; color: #999; }
+      .tl-dot { position: absolute; left: -5px; top: 16px; margin-top: 0; width: 10px; height: 10px; }
+      .tl-info { padding: 8px 10px; margin-top: 4px; }
+      .tl-name { font-size: .84rem; margin-bottom: 5px; }
+      .tag { font-size: .7rem; padding: 2px 7px; }
+      .transit-from { font-size: .68rem; padding: 2px 9px; }
 
-      .cafe-sug, .shop-sug { font-size: .78rem; padding: 8px 11px; }
+      .cafe-sug, .shop-sug { font-size: .76rem; padding: 7px 10px; }
+      .day-cost { padding: 9px 12px; font-size: .74rem; }
+      .alert { font-size: .8rem; padding: 10px 14px; }
 
-      .day-cost { padding: 10px 14px; font-size: .77rem; }
-
+      /* Grids → coluna única */
       .g-grid { grid-template-columns: 1fr; }
-      .grand-box { padding: 20px 16px; }
-      .grand-total-val { font-size: 1.6rem; }
-
       .r-grid { grid-template-columns: 1fr; }
       .cf-grid { grid-template-columns: 1fr; }
       .dk-cards { grid-template-columns: 1fr; }
       .hotel-grid { grid-template-columns: 1fr; }
       .train-grid { grid-template-columns: 1fr 1fr; }
       .flight-grid { grid-template-columns: 1fr; }
-
-      .cost-table { font-size: .78rem; }
-      .cost-table th, .cost-table td { padding: 8px 8px; }
-
-      .rv-timeline { border-radius: 10px; }
-      .rv-seg { padding: 10px 6px; font-size: .68rem; }
-      .rv-spots { gap: 4px; }
-      .rv-spot { font-size: .7rem; padding: 2px 8px; }
-      .rv-day-label { min-width: 90px; font-size: .7rem; }
-
-      .logi-hero { padding: 20px 18px; }
-      .ck-nav { flex-direction: column; gap: 8px; }
-      .ck-nav-btn { padding: 12px; font-size: .85rem; }
-      .ck-label { font-size: .8rem; }
-
-      .dk-city-hd { padding: 12px 16px; }
-      .dk-city-hd h3 { font-size: 1.15rem; }
       .hoho-routes { flex-direction: column; }
-      .sec-title { font-size: 1.4rem; }
+
+      .grand-box { padding: 18px 14px; }
+      .grand-total-val { font-size: 1.5rem; }
+      .grand-full { font-size: .88rem; padding: 8px 16px; }
+
+      /* Tabela custos — scroll horizontal */
+      .cost-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .cost-table { font-size: .75rem; min-width: 480px; }
+      .cost-table th, .cost-table td { padding: 7px 8px; }
+
+      /* Resumo */
+      .rv-timeline { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+      .rv-seg { flex-shrink: 0; padding: 9px 8px; font-size: .66rem; min-width: 70px; }
+      .rv-day-row { flex-direction: column; gap: 6px; padding: 10px 14px; }
+      .rv-day-label { min-width: unset; }
+      .rv-spots { gap: 4px; }
+      .rv-spot { font-size: .68rem; padding: 2px 7px; white-space: normal; }
+
+      /* Logística */
+      .logi-hero { padding: 18px 16px; }
+      .logi-hero h2 { font-size: 1.2rem; }
+
+      /* Checklist */
+      .ck-nav { flex-direction: column; gap: 8px; }
+      .ck-nav-btn { padding: 11px; font-size: .82rem; }
+      .ck-label { font-size: .78rem; }
+      .ck-label strong { font-size: .8rem; }
+      .ck-item { padding: 9px 12px; gap: 10px; }
+
+      /* Dicas */
+      .dk-city-hd { padding: 11px 14px; }
+      .dk-city-hd h3 { font-size: 1.1rem; }
+      .dk-card { padding: 16px 14px; }
+
+      .sec-title { font-size: 1.3rem; }
+      .sec-sub { font-size: .8rem; }
+      .train-card { padding: 16px 14px; }
+      .hoho-card { padding: 16px 14px; }
     }
 
-    @media(max-width:420px) {
-      .hero h1 { font-size: 1.4rem; }
-      .tl-time { width: 40px; font-size: .68rem; }
-      .tl-row:not(:last-child)::after { left: 51px; }
+    @media(max-width:400px) {
+      .hero h1 { font-size: 1.3rem; }
+      .tl-time { width: 38px; font-size: .66rem; }
+      .tl-row:not(:last-child)::after { left: 49px; }
       .train-grid { grid-template-columns: 1fr; }
-      .rv-timeline { flex-wrap: wrap; }
-      .rv-seg { flex: 1 1 30%; }
+      .day-hd h3 { font-size: .8rem; }
+      .cost-badge { display: none; }
     }
 
     /* ===== LOGISTICS / VOOS & HOTÉIS ===== */
@@ -2782,7 +2814,7 @@
   </div>
 
   <div class="city-sub m">🏰 Madrid (09 a 14/set — 5 dias completos)</div>
-  <table class="cost-table">
+  <div class="cost-table-wrap"><table class="cost-table">
     <thead>
       <tr>
         <th class="m">Data</th><th class="m">Programa</th><th class="m">Atrações</th><th class="m">Refeições</th><th class="m">Transporte</th><th class="m">Total 2 pessoas</th>
@@ -2797,10 +2829,10 @@
       <tr><td>14/set Seg</td><td>→ Valencia (AVE médio)</td><td>€0</td><td>€55</td><td>€80</td><td><strong>~€135</strong><span class="brl">R$837</span></td></tr>
       <tr class="tot"><td colspan="5"><strong>SUBTOTAL MADRID</strong></td><td><strong>~€837</strong><span class="brl">R$5.189</span></td></tr>
     </tbody>
-  </table>
+  </table></div>
 
   <div class="city-sub v">🍊 Valencia (15 a 16/set — 2 dias)</div>
-  <table class="cost-table">
+  <div class="cost-table-wrap"><table class="cost-table">
     <thead>
       <tr>
         <th class="v">Data</th><th class="v">Programa</th><th class="v">Atrações</th><th class="v">Refeições</th><th class="v">Transporte</th><th class="v">Total 2 pessoas</th>
@@ -2811,10 +2843,10 @@
       <tr><td>16/set Qua</td><td>El Carmen + → Barcelona</td><td>€0</td><td>€55</td><td>€85</td><td><strong>~€145</strong><span class="brl">R$899</span></td></tr>
       <tr class="tot"><td colspan="5"><strong>SUBTOTAL VALENCIA</strong></td><td><strong>~€367</strong><span class="brl">R$2.275</span></td></tr>
     </tbody>
-  </table>
+  </table></div>
 
   <div class="city-sub b">🏛️ Barcelona (16 a 23/set — 7 dias)</div>
-  <table class="cost-table">
+  <div class="cost-table-wrap"><table class="cost-table">
     <thead>
       <tr>
         <th class="b">Data</th><th class="b">Programa</th><th class="b">Atrações</th><th class="b">Refeições</th><th class="b">Transporte</th><th class="b">Total 2 pessoas</th>
@@ -2831,7 +2863,7 @@
       <tr><td>23/set Qua</td><td>Partida</td><td>€0</td><td>€35</td><td>€14</td><td><strong>~€50</strong><span class="brl">R$310</span></td></tr>
       <tr class="tot"><td colspan="5"><strong>SUBTOTAL BARCELONA</strong></td><td><strong>~€1.248</strong><span class="brl">R$7.738</span></td></tr>
     </tbody>
-  </table>
+  </table></div>
 
   <div class="grand-box">
     <h3>📊 Resumo Total da Viagem — 2 pessoas</h3>
