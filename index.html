@@ -20,15 +20,15 @@
     /* ===== HERO ===== */
     .hero {
       background: linear-gradient(135deg, #c0392b 0%, #8e44ad 40%, #1a5276 100%);
-      color: #fff; padding: 55px 20px 45px; text-align: center; position: relative; overflow: hidden;
+      color: #fff; padding: 36px 20px 28px; text-align: center; position: relative; overflow: hidden;
     }
-    .hero::before { content: '🇪🇸'; position: absolute; font-size: 280px; opacity: .05; top: -40px; right: -20px; pointer-events: none; }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; letter-spacing: -.5px; margin-bottom: 8px; }
-    .hero p { font-size: 1.05rem; opacity: .88; margin-bottom: 30px; }
-    .summary-strip { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-    .sum-pill { background: rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius: 30px; padding: 10px 22px; text-align: center; border: 1px solid rgba(255,255,255,.25); }
-    .sum-pill .n { font-size: 1.55rem; font-weight: 800; display: block; }
-    .sum-pill .l { font-size: .78rem; opacity: .82; }
+    .hero::before { content: '🇪🇸'; position: absolute; font-size: 200px; opacity: .05; top: -30px; right: -20px; pointer-events: none; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; letter-spacing: -.5px; margin-bottom: 6px; }
+    .hero p { font-size: .95rem; opacity: .88; margin-bottom: 20px; }
+    .summary-strip { display: inline-flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .sum-pill { background: rgba(255,255,255,.18); backdrop-filter: blur(8px); border-radius: 30px; padding: 7px 16px; text-align: center; border: 1px solid rgba(255,255,255,.25); }
+    .sum-pill .n { font-size: 1.2rem; font-weight: 800; display: block; }
+    .sum-pill .l { font-size: .72rem; opacity: .82; }
 
     /* ===== NAV ===== */
     .nav-bar { position: sticky; top: 0; z-index: 200; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.08); display: flex; justify-content: center; gap: 6px; padding: 11px 16px; flex-wrap: wrap; }
@@ -199,7 +199,7 @@
     .city-sub.m { color: var(--madrid); } .city-sub.v { color: var(--valencia); } .city-sub.b { color: var(--barcelona); }
     /* ===== COLLAPSE ===== */
     .day-hd { cursor: pointer; user-select: none; }
-    .day-hd .collapse-arrow { margin-left: auto; font-size: 1rem; transition: transform .3s; flex-shrink: 0; opacity: .8; }
+    .day-hd .collapse-arrow { font-size: 1rem; transition: transform .3s; flex-shrink: 0; opacity: .8; }
     .day-card.collapsed .collapse-arrow { transform: rotate(-90deg); }
     .day-body { transition: none; }
     .day-card.collapsed .day-body { display: none; }
@@ -232,8 +232,10 @@
       .day-hd h3 { font-size: .86rem; line-height: 1.3; }
       .day-hd .dd { font-size: .74rem; }
       .day-num { width: 32px; height: 32px; font-size: .82rem; }
-      .cost-badge { font-size: .68rem; padding: 3px 8px; max-width: 90px; }
-      .cost-badge .rbrl { font-size: .64rem; }
+      .day-hd { flex-wrap: wrap; }
+      .cost-badge { font-size: .68rem; padding: 3px 8px; order: 3; width: 100%; text-align: left; margin-top: 2px; border-radius: 8px; }
+      .cost-badge .rbrl { font-size: .64rem; display: inline; }
+      .day-hd .collapse-arrow { order: 2; margin-left: auto; }
 
       /* Mapa de rota — scroll horizontal */
       .route-map { flex-wrap: nowrap; overflow-x: auto; padding: 10px 12px 8px; -webkit-overflow-scrolling: touch; }
@@ -282,10 +284,13 @@
       /* Resumo */
       .rv-timeline { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
       .rv-seg { flex-shrink: 0; padding: 9px 8px; font-size: .66rem; min-width: 70px; }
+      .rv-city-block { border-radius: 10px; }
+      .rv-city-hd { flex-wrap: wrap; gap: 8px; padding: 12px 14px; }
+      .rv-city-hd .rv-city-name { font-size: 1rem; }
       .rv-day-row { flex-direction: column; gap: 6px; padding: 10px 14px; }
       .rv-day-label { min-width: unset; }
       .rv-spots { gap: 4px; }
-      .rv-spot { font-size: .68rem; padding: 2px 7px; white-space: normal; }
+      .rv-spot { font-size: .68rem; padding: 2px 7px; white-space: normal; word-break: break-word; }
 
       /* Logística */
       .logi-hero { padding: 18px 16px; }
@@ -316,7 +321,6 @@
       .tl-row:not(:last-child)::after { left: 36px; }
       .train-grid { grid-template-columns: 1fr; }
       .day-hd h3 { font-size: .8rem; }
-      .cost-badge { display: none; }
     }
 
     /* ===== LOGISTICS / VOOS & HOTÉIS ===== */
@@ -510,7 +514,7 @@
 <body>
 
 <div style="background:#1c2541;color:#aaa;text-align:center;font-size:.75rem;padding:6px;letter-spacing:.3px;">
-  🔄 Última atualização: <strong style="color:#fff;">18/07/2026 às 18h38</strong>
+  🔄 Última atualização: <strong style="color:#fff;">18/07/2026 às 18h43</strong>
 </div>
 <div class="hero">
   <h1>🇪🇸 Espanha — Setembro 2026</h1>
@@ -580,57 +584,59 @@
         <div class="rv-day-label"><strong>Dia 1</strong>Qua 09/09</div>
         <div class="rv-spots">
           <span class="rv-spot trn">✈️ Chegada MAD 10h45</span>
-          <span class="rv-spot tip">🚌 HOHO Rota Histórica (opcional)</span>
-          <span class="rv-spot att">🌆 Puerta del Sol + Plaza Mayor</span>
-          <span class="rv-spot eat">🛒 Jantar Mercado de San Miguel</span>
+          <span class="rv-spot att">🏰 Plaza Mayor + Puerta del Sol</span>
+          <span class="rv-spot att">🌳 Retiro + Palácio de Cristal</span>
+          <span class="rv-spot att">🏙️ Gran Vía</span>
+          <span class="rv-spot eat">🎨 Jantar Malasaña</span>
         </div>
       </div>
       <div class="rv-day-row">
         <div class="rv-day-label"><strong>Dia 2</strong>Qui 10/09</div>
         <div class="rv-spots">
-          <span class="rv-spot att">🖼️ Museo del Prado</span>
-          <span class="rv-spot eat">🍽️ Almoço La Finca de Susana</span>
-          <span class="rv-spot att">🌳 Parque del Retiro + Palácio de Cristal</span>
-          <span class="rv-spot eat">🍻 Tapas La Latina — Calle Cava Baja</span>
+          <span class="rv-spot eat">🛒 Mercado de San Miguel</span>
+          <span class="rv-spot att">⛪ Almudena + 👑 Palácio Real</span>
+          <span class="rv-spot eat">🍻 Tapas La Latina</span>
+          <span class="rv-spot att">🌅 Templo de Debod</span>
         </div>
       </div>
       <div class="rv-day-row">
         <div class="rv-day-label"><strong>Dia 3</strong>Sex 11/09</div>
         <div class="rv-spots">
-          <span class="rv-spot att">🎨 Museo Reina Sofía (Guernica)</span>
-          <span class="rv-spot eat">🍳 Almoço Casa Dani</span>
-          <span class="rv-spot att">👑 Palácio Real de Madrid</span>
-          <span class="rv-spot att">⛪ Catedral de la Almudena</span>
-          <span class="rv-spot att">🌆 Gran Vía + Malasaña</span>
+          <span class="rv-spot att">🎨 Reina Sofía (Guernica)</span>
+          <span class="rv-spot eat">🛒 Almoço Antón Martín</span>
+          <span class="rv-spot att">📖 Bairro das Letras</span>
+          <span class="rv-spot att">🌿 Jardín Botánico</span>
+          <span class="rv-spot att">🖼️ Prado + 🏛️ Thyssen</span>
+          <span class="rv-spot eat">🍷 Jantar Las Letras</span>
         </div>
       </div>
       <div class="rv-day-row">
         <div class="rv-day-label"><strong>Dia 4</strong>Sáb 12/09</div>
         <div class="rv-spots">
           <span class="rv-spot exc">🚄 Excursão: Toledo</span>
-          <span class="rv-spot att">⛪ Catedral Primada (Toledo)</span>
+          <span class="rv-spot att">⛪ Catedral Primada</span>
           <span class="rv-spot att">🏰 Alcázar de Toledo</span>
           <span class="rv-spot att">🕍 Sinagoga del Tránsito</span>
-          <span class="rv-spot att">🚶 Bairro Judeu + Miradouro do Tejo</span>
-          <span class="rv-spot tip">— ou — </span>
+          <span class="rv-spot att">🚶 Bairro Judeu + Rio Tejo</span>
         </div>
       </div>
       <div class="rv-day-row">
         <div class="rv-day-label"><strong>Dia 5</strong>Dom 13/09</div>
         <div class="rv-spots">
-          <span class="rv-spot att">🖼️ Thyssen-Bornemisza</span>
-          <span class="rv-spot eat">🍷 Almoço Estado Puro</span>
-          <span class="rv-spot att">🏘️ Malasaña + Chueca</span>
-          <span class="rv-spot cof">☕ Hola Coffee ou Mür Coffee</span>
+          <span class="rv-spot att">🛍️ El Rastro (feira)</span>
+          <span class="rv-spot eat">🍻 Tapas La Latina</span>
+          <span class="rv-spot att">⭕ Callao + Círculo Bellas Artes</span>
+          <span class="rv-spot att">🏦 Cibeles + Puerta de Alcalá</span>
+          <span class="rv-spot att">🗿 Gran Vía → Plaza España</span>
           <span class="rv-spot eat">🥩 Jantar Sobrino de Botín (1725)</span>
         </div>
       </div>
       <div class="rv-day-row">
         <div class="rv-day-label"><strong>Dia 6</strong>Seg 14/09</div>
         <div class="rv-spots">
-          <span class="rv-spot cof">☕ Federal Café</span>
-          <span class="rv-spot tip">🖼️ Thyssen grátis (seg 12h–16h)</span>
-          <span class="rv-spot trn">🚄 AVE → Valencia (1h45)</span>
+          <span class="rv-spot cof">☕ Federal Café + check-out</span>
+          <span class="rv-spot tip">🖼️ Thyssen grátis (12h–16h)</span>
+          <span class="rv-spot trn">🚄 AVE → Valencia (~1h45)</span>
         </div>
       </div>
     </div>
