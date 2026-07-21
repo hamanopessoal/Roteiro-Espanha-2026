@@ -518,7 +518,7 @@
 <body>
 
 <div style="background:#1c2541;color:#aaa;text-align:center;font-size:.75rem;padding:6px;letter-spacing:.3px;">
-  🔄 Última atualização: <strong style="color:#fff;">21/07/2026 às 16h37</strong>
+  🔄 Última atualização: <strong style="color:#fff;">21/07/2026 às 16h47</strong>
 </div>
 <div class="hero">
   <h1>🇪🇸 Espanha — Setembro 2026</h1>
@@ -534,6 +534,7 @@
 
 <nav class="nav-bar">
   <button class="ntab rs"    onclick="show('resumo',   this)">📋 Resumo</button>
+  <button class="ntab dk"    onclick="show('dicas',    this)">💡 Dicas</button>
   <button class="ntab lg"    onclick="show('logistics',this)">✈️ Voos, Hotéis &amp; Trens</button>
   <button class="ntab ck"    onclick="show('checklist',this)">✅ Checklist</button>
   <button class="ntab m on"  onclick="show('madrid',   this)">🏰 Madrid</button>
@@ -541,7 +542,6 @@
   <button class="ntab b"     onclick="show('barcelona',this)">🏛️ Barcelona</button>
   <button class="ntab fd"    onclick="show('food',     this)">🍽️ Comida &amp; Café</button>
   <button class="ntab co"    onclick="show('costs',    this)">💰 Custos</button>
-  <button class="ntab dk"    onclick="show('dicas',    this)">💡 Dicas</button>
 </nav>
 
 <div class="container">
@@ -779,6 +779,385 @@
   </div>
 
 </div>
+<!-- ======================================================= DICAS ======================================================= -->
+<div id="dicas" class="sec">
+  <div class="dk-hero">
+    <h2>💡 Dicas de Viagem</h2>
+    <p>Segredos locais, armadilhas turísticas e truques para aproveitar o máximo da Espanha</p>
+  </div>
+
+  <!-- ===== GERAL ===== -->
+  <div class="dk-city-block">
+    <div class="dk-city-hd g">
+      <div class="dk-ico">🇪🇸</div>
+      <div>
+        <h3>Geral — Espanha</h3>
+        <div class="dk-sub">Dicas que valem para as três cidades</div>
+      </div>
+    </div>
+    <div class="dk-cards">
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🕐</div>
+          <div>
+            <div class="dk-card-title">Horários españoles — prepare-se</div>
+            <span class="dk-card-tag culture">Cultura local</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="☕">Café da manhã: 8h–10h30</li>
+          <li data-icon="🍽️">Almoço (comida): 13h30–15h30 — horário nobre dos restaurantes locais</li>
+          <li data-icon="⚠️">Das 16h às 20h muitos restaurantes fecham (descanso)</li>
+          <li data-icon="🌙">Jantar começa de verdade às 20h30–21h; antes disso você vai ao restaurante turístico</li>
+          <li data-icon="🛒">Supermercados: Mercadona é o melhor custo-benefício para piqueniques e café da manhã</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🚇</div>
+          <div>
+            <div class="dk-card-title">Transporte público — economize</div>
+            <span class="dk-card-tag transport">Transporte</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Sempre compre bilhetes de 10 viagens (T-Casual/Metrobús) — 30–40% mais barato que avulso</li>
+          <li data-icon="✅">Em Madrid e Barcelona, o metro cobre quase tudo — evite táxi no centro</li>
+          <li data-icon="⚠️">Uber/Cabify são mais baratos que táxi tradicional em todas as cidades</li>
+          <li data-icon="💡">App Google Maps funciona perfeitamente para rotas de metro e ônibus</li>
+          <li data-icon="💡">Aeroportos: sempre pesquise o ônibus oficial antes de pegar táxi — economia de €20–30</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🔒</div>
+          <div>
+            <div class="dk-card-title">Segurança — batedor de carteira</div>
+            <span class="dk-card-tag safety">Segurança</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="⚠️">Barcelona tem o maior índice de furtos de carteiristas da Europa — desconfie de quem se aproxima em La Rambla</li>
+          <li data-icon="⚠️">Metro Linha 3 (Barcelona) e Las Ramblas: bolsas sempre na frente, nunca no bolso traseiro</li>
+          <li data-icon="⚠️">Em Madrid: Puerta del Sol, Gran Vía e metro L1/L10 são pontos críticos</li>
+          <li data-icon="✅">Carteira mínima na rua — deixe documentos originais no hotel</li>
+          <li data-icon="✅">Pochete de segurança discreta sob a roupa é a melhor solução</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">💶</div>
+          <div>
+            <div class="dk-card-title">Dinheiro e pagamentos</div>
+            <span class="dk-card-tag tip">Economize</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Espanha aceita cartão em quase todo lugar — leve pouco dinheiro em espécie</li>
+          <li data-icon="💡">Caixas eletrônicos: prefira os de bancos (CaixaBank, Santander) — evite os da rua (cobram taxas absurdas)</li>
+          <li data-icon="⚠️">Se o caixa perguntar em qual moeda converter (DCC), sempre escolha <strong>euros</strong> — converter em reais custa +6%</li>
+          <li data-icon="💡">Menu del día: almoço completo com vinho por €12–18 — a melhor relação custo-benefício</li>
+          <li data-icon="✅">Gorjeta não é obrigatória; 5–10% em restaurantes bons é apreciado mas não esperado</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🆘</div>
+          <div>
+            <div class="dk-card-title">Emergências e utilidades</div>
+            <span class="dk-card-tag safety">Emergências</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="🚨">Emergência geral na Espanha: <strong>112</strong> (polícia, bombeiros, SAMU)</li>
+          <li data-icon="🚔">Polícia (Mossos/Nacional): <strong>091</strong> — registrar furto para o seguro</li>
+          <li data-icon="⚠️">Não troque dinheiro em aeroportos ou casas de câmbio na rua — taxas abusivas</li>
+          <li data-icon="💡">Siesta real: muitas lojas e atrações menores fecham das 13h às 17h — planeje as visitas</li>
+          <li data-icon="⚠️">Agosto em Madrid: muitos restaurantes e lojas locais fecham nas férias de verão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MADRID ===== -->
+  <div class="dk-city-block">
+    <div class="dk-city-hd m">
+      <div class="dk-ico">🏰</div>
+      <div>
+        <h3>Madrid</h3>
+        <div class="dk-sub">Armadilhas e segredos da capital</div>
+      </div>
+    </div>
+    <div class="dk-cards">
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🎨</div>
+          <div>
+            <div class="dk-card-title">Museus — entradas gratuitas</div>
+            <span class="dk-card-tag ticket">Ingressos</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="🆓">Museu do Prado: gratuito <strong>sextas-feiras das 18h às 20h</strong> — cheio mas vale</li>
+          <li data-icon="🆓">Reina Sofía: gratuito <strong>segundas das 19h às 21h</strong> + domingos das 13h30–19h</li>
+          <li data-icon="🆓">Thyssen-Bornemisza: gratuito <strong>segundas das 12h–16h</strong></li>
+          <li data-icon="💡">Passeio del Arte (€29,60/pessoa): Prado + Reina Sofía + Thyssen — economiza ~€10 por pessoa</li>
+          <li data-icon="⚠️">Nos horários gratuitos há fila; chegar 30 min antes é essencial</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🍖</div>
+          <div>
+            <div class="dk-card-title">Comida — onde e como comer bem</div>
+            <span class="dk-card-tag food">Gastronomia</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="💡">Mercado de San Miguel: bonito para uma taça de vinho, mas os preços são turísticos — não coma aí</li>
+          <li data-icon="✅">Calle Cava Baja (La Latina): a melhor rua de tapas autênticas da cidade</li>
+          <li data-icon="✅">Bodega de la Ardosa (Malasaña): taberna do séc. XIX, vermouth e tapas sem truque</li>
+          <li data-icon="⚠️">Gran Vía e Puerta del Sol: restaurantes com foto no cardápio = armadilha turística, qualidade baixa</li>
+          <li data-icon="💡">Bocadillo de calamares: prato icônico de Madrid — bares em Plaza Mayor (€3–4) são razoáveis</li>
+          <li data-icon="⚠️">Sangria: não é bebida local em Madrid — madrileños bebem vinho, cerveja ou vermute. Pedir sangria é sinalizar turista</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🚌</div>
+          <div>
+            <div class="dk-card-title">Transporte e bairros</div>
+            <span class="dk-card-tag transport">Transporte</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Madrid é extremamente caminhável — do Retiro ao Prado são 10 min a pé</li>
+          <li data-icon="💡">Aeroporto Barajas: metrô Linha 8 até o centro por €5 (bilhete especial aeroporto) — não pegue táxi (€30+)</li>
+          <li data-icon="💡">Malasaña e Lavapiés: bairros autênticos, jovens, sem turista em excesso</li>
+          <li data-icon="⚠️">Domingo: Rastro de Madrid (mercado de pulgas) — magnífico mas lotado e alto risco de pickpocket</li>
+          <li data-icon="💡">El Retiro: vai de manhã cedo para pegar barcos no lago sem fila</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🏟️</div>
+          <div>
+            <div class="dk-card-title">Atrações — o que ninguém conta</div>
+            <span class="dk-card-tag tip">Segredos</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="💡">Bernabéu: o tour pela manhã é mais tranquilo — evite fins de semana com jogo</li>
+          <li data-icon="💡">Palácio Real: acesso à terraça do Jardín de Sabatini tem vista gratuita e incrível</li>
+          <li data-icon="⚠️">Sobrino de Botín (o restaurante mais antigo do mundo): reserva obrigatória, caro mas experiência única</li>
+          <li data-icon="✅">Templo de Debod ao pôr do sol: vista de Madrid e entrada gratuita — um dos mais fotogênicos</li>
+          <li data-icon="💡">Visita a Toledo ou Segóvia saindo de Madrid: €30–40 de trem (1h), vale o dia inteiro</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== VALENCIA ===== -->
+  <div class="dk-city-block">
+    <div class="dk-city-hd v">
+      <div class="dk-ico">🍊</div>
+      <div>
+        <h3>Valencia</h3>
+        <div class="dk-sub">A cidade da paella — como não cair nas armadilhas</div>
+      </div>
+    </div>
+
+    <div class="dk-warn">
+      <strong>⚠️ A regra de ouro da paella em Valencia:</strong> Paella à noite = armadilha turística. Locais autênticos NÃO servem paella no jantar — é prato de almoço. Se você pediu paella às 21h e ficou pronta em 10 minutos, ela veio requentada no <em>paellador</em> (micro-ondas valenciano).
+    </div>
+
+    <div class="dk-cards">
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🥘</div>
+          <div>
+            <div class="dk-card-title">Paella — o guia completo</div>
+            <span class="dk-card-tag food">Gastronomia</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Peça paella <strong>no almoço</strong>, entre 13h30 e 15h</li>
+          <li data-icon="✅">Paella autêntica demora <strong>30–40 minutos</strong> para ser preparada — se chegou rápido, é requentada</li>
+          <li data-icon="✅">Paella valenciana tradicional: frango, coelho, feijão verde e branco — sem frutos do mar (isso é arroz a banda)</li>
+          <li data-icon="⚠️">Evite restaurantes na Praia da Malvarrosa com fotos enormes no cardápio</li>
+          <li data-icon="💡">La Pepica (Malvarrosa) e El Racó de l'Olla (praia del Cabanyal) são autênticos e respeitados pelos locais</li>
+          <li data-icon="💡">Mínimo 2 pessoas para pedir uma paella inteira — peça para 4 se quiser fartura</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🌊</div>
+          <div>
+            <div class="dk-card-title">Barceloneta de Valencia — Praia</div>
+            <span class="dk-card-tag tip">Dica local</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="💡">Praia do El Saler (sul, 15 km): mais tranquila que Malvarrosa, preferida pelos locais</li>
+          <li data-icon="✅">Malvarrosa: vai de bicicleta pelo Jardín del Turia — 5 km de ciclovia sem trânsito</li>
+          <li data-icon="⚠️">Na praia em setembro: ainda quente (28–30°C), mas muito mais vazio que agosto</li>
+          <li data-icon="💡">Aluguel de bicicleta: Valenbisi (bike-sharing) funciona bem — €13/semana</li>
+          <li data-icon="💡">El Cabanyal (bairro da praia): recentemente revitalizado, bares locais ótimos e preço justo</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🏛️</div>
+          <div>
+            <div class="dk-card-title">Cidade das Artes e das Ciências</div>
+            <span class="dk-card-tag ticket">Ingressos</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="💡">A arquitetura de Calatrava é de graça para ver por fora — as fotos mais icônicas não exigem ingresso</li>
+          <li data-icon="✅">Oceanogràfic: maior aquário da Europa — reserve online (€32/pessoa), evita fila</li>
+          <li data-icon="💡">Museu das Ciências Príncipe Felipe (€8): vale a experiência interativa</li>
+          <li data-icon="⚠️">Hemisfèric (planetário): sessões lotam rápido em setembro — compre online</li>
+          <li data-icon="💡">Final de tarde no Jardín del Turia (em frente à CAC): pôr do sol deslumbrante e completamente de graça</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🛍️</div>
+          <div>
+            <div class="dk-card-title">Mercado Central e centro histórico</div>
+            <span class="dk-card-tag tip">Experiência local</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Mercado Central: um dos mais bonitos da Europa — vá de manhã (8h–13h) para ver no auge</li>
+          <li data-icon="💡">Horchata com fartons na Horchatería Santa Catalina (Plaça de Santa Caterina) — obrigatório</li>
+          <li data-icon="✅">Catedral de Valencia: vale pagar para subir a Torre del Micalet — vista 360° da cidade</li>
+          <li data-icon="💡">Barrio del Carmen: o mais animado à noite — bares, grafite e arquitetura medieval misturados</li>
+          <li data-icon="⚠️">Rua Colón e área de El Ensanche: shoppings e comércio, sem muito interesse turístico</li>
+          <li data-icon="⚠️">Restaurantes ao redor da Cidade das Artes e Ciências cobram 40–50% acima da média — busque no bairro de Ruzafa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BARCELONA ===== -->
+  <div class="dk-city-block">
+    <div class="dk-city-hd b">
+      <div class="dk-ico">🏛️</div>
+      <div>
+        <h3>Barcelona</h3>
+        <div class="dk-sub">Rota Gaudí, segurança e dicas de locais</div>
+      </div>
+    </div>
+
+    <div class="dk-warn">
+      <strong>⚠️ Sagrada Família + Park Güell — NUNCA compre na bilheteria:</strong> Sempre esgotado. Reserve online com 1–2 semanas de antecedência. Em setembro (alta temporada), quanto antes melhor.
+    </div>
+
+    <div class="dk-cards">
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">⛪</div>
+          <div>
+            <div class="dk-card-title">Sagrada Família — como aproveitar</div>
+            <span class="dk-card-tag ticket">Ingressos &amp; Fotos</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">Reserve online: <a href="https://sagradafamilia.org/en/tickets" class="slink">sagradafamilia.org/en/tickets</a></li>
+          <li data-icon="📷">Melhor ângulo para foto: <strong>Plaça de Gaudí</strong> (o parquinho com lago em frente) — não tire debaixo da torre</li>
+          <li data-icon="💡">Entre pela Fachada da Natividade (Lado Nascente) de manhã — luz natural entra pelos vitrais azuis</li>
+          <li data-icon="💡">Torre da Natividade ou da Paixão? A da Paixão tem fila menor e vista igualmente impressionante</li>
+          <li data-icon="⚠️">Chegue 15 min antes do horário marcado — entrada é estritamente no horário do bilhete</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🌿</div>
+          <div>
+            <div class="dk-card-title">Park Güell — o maior erro dos turistas</div>
+            <span class="dk-card-tag trap">Armadilha</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="⚠️">Não vá de metro + caminhada a pé — a subida é íngreme e extenuante no calor de setembro</li>
+          <li data-icon="✅">Táxi ou carro direto até a <strong>Entrada Carmel</strong> (entrada superior) e desça caminhando — muito mais fácil</li>
+          <li data-icon="✅">Reserve online: <a href="https://parkguell.barcelona/en/buy-tickets" class="slink">parkguell.barcelona/en/buy-tickets</a></li>
+          <li data-icon="💡">Manhã cedo (9h) ou perto do fechamento: menos lotado, luz melhor para fotos</li>
+          <li data-icon="💡">A área fora da zona monumental (gratuita) também é linda — vale explorar antes de entrar</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🌊</div>
+          <div>
+            <div class="dk-card-title">Barceloneta — praia sem armadilha</div>
+            <span class="dk-card-tag trap">Armadilha &amp; Dicas</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="⚠️">Evite os restaurantes das ruas principais da Barceloneta — preços absurdos e qualidade baixa</li>
+          <li data-icon="✅">Busque os <strong>becos internos</strong> (Calle Balboa, Calle Maquinista) para bares e restaurantes dos locais</li>
+          <li data-icon="⚠️">Praia lotada em setembro — chegue antes das 11h para pegar um lugar</li>
+          <li data-icon="⚠️">Alto risco de furto de pertences na praia — nunca deixe objetos sem vigilância na areia</li>
+          <li data-icon="💡">Prefira as praias de Bogatell ou Nova Icária (a leste) — menos lotadas, mais tranquilas</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🚡</div>
+          <div>
+            <div class="dk-card-title">Las Ramblas — a rua mais famosa e perigosa</div>
+            <span class="dk-card-tag safety">Segurança</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="⚠️">A área de Las Ramblas tem o maior índice de pickpocket da Europa — extrema atenção</li>
+          <li data-icon="⚠️">Evite os restaurantes com menus turísticos na Rambla — cara e ruim</li>
+          <li data-icon="✅">La Boqueria: bonito para ver, mas lotado — Mercat de Santa Caterina (Barri Gòtic) é a alternativa local</li>
+          <li data-icon="💡">Paralelo (Carrer del Parlament, Sant Antoni): bairros para comer bem longe do turismo</li>
+          <li data-icon="💡">La Barceloneta a noite é bonita para uma caminhada — segura se estiver em movimento</li>
+          <li data-icon="⚠️">Tapas não são tradicionais em Barcelona — peça pratos locais (patatas bravas, croquetas, pà amb tomàquet)</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🏘️</div>
+          <div>
+            <div class="dk-card-title">Outros pontos Gaudí e arquitetura</div>
+            <span class="dk-card-tag tip">Visitas</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="💡">Casa Batlló: espetacular de noite com o show de luz (€35+) — reserve online com antecedência</li>
+          <li data-icon="💡">Casa Milà (La Pedrera): terraço ao pôr do sol é imperdível — ingresso noturno disponível</li>
+          <li data-icon="✅">Palau de la Música Catalana: tour guiado (€22) mais acessível que concerto — arquitetura incrível</li>
+          <li data-icon="💡">Gràcia e El Born: bairros onde barcelonenses reais vivem, comem e bebem</li>
+          <li data-icon="⚠️">Bunkers del Carmel: melhor pôr do sol de Barcelona — vista 360°, mas suba de táxi (caminhada de 20 min é cansativa com calor)</li>
+        </ul>
+      </div>
+      <div class="dk-card">
+        <div class="dk-card-hd">
+          <div class="dk-card-ico">🚇</div>
+          <div>
+            <div class="dk-card-title">Transporte em Barcelona</div>
+            <span class="dk-card-tag transport">Transporte</span>
+          </div>
+        </div>
+        <ul>
+          <li data-icon="✅">T-Casual (10 viagens, ~€12,15): vale para metro, ônibus e tram — use sempre</li>
+          <li data-icon="💡">Aeroporto El Prat: Aerobus (€6,75) ou metrô Linha 9 (€5,15) — ambos confiáveis</li>
+          <li data-icon="⚠️">Táxi do aeroporto: fixo €39 — OK para 2+ pessoas com bagagem</li>
+          <li data-icon="💡">Barcelona é muito caminhável — Barri Gòtic, Born, Barceloneta e Eixample são todos a pé entre si</li>
+          <li data-icon="💡">Bus Turístic: só vale se quiser descansar — passe de 2 dias (€42) cobre as 3 rotas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- ======================================================= /DICAS ======================================================= -->
 
 <!-- ======================================================== CHECKLIST == -->
 <div id="checklist" class="sec">
@@ -2995,385 +3374,6 @@
   </div>
 </div>
 
-<!-- ======================================================= DICAS ======================================================= -->
-<div id="dicas" class="sec">
-  <div class="dk-hero">
-    <h2>💡 Dicas de Viagem</h2>
-    <p>Segredos locais, armadilhas turísticas e truques para aproveitar o máximo da Espanha</p>
-  </div>
-
-  <!-- ===== GERAL ===== -->
-  <div class="dk-city-block">
-    <div class="dk-city-hd g">
-      <div class="dk-ico">🇪🇸</div>
-      <div>
-        <h3>Geral — Espanha</h3>
-        <div class="dk-sub">Dicas que valem para as três cidades</div>
-      </div>
-    </div>
-    <div class="dk-cards">
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🕐</div>
-          <div>
-            <div class="dk-card-title">Horários españoles — prepare-se</div>
-            <span class="dk-card-tag culture">Cultura local</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="☕">Café da manhã: 8h–10h30</li>
-          <li data-icon="🍽️">Almoço (comida): 13h30–15h30 — horário nobre dos restaurantes locais</li>
-          <li data-icon="⚠️">Das 16h às 20h muitos restaurantes fecham (descanso)</li>
-          <li data-icon="🌙">Jantar começa de verdade às 20h30–21h; antes disso você vai ao restaurante turístico</li>
-          <li data-icon="🛒">Supermercados: Mercadona é o melhor custo-benefício para piqueniques e café da manhã</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🚇</div>
-          <div>
-            <div class="dk-card-title">Transporte público — economize</div>
-            <span class="dk-card-tag transport">Transporte</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Sempre compre bilhetes de 10 viagens (T-Casual/Metrobús) — 30–40% mais barato que avulso</li>
-          <li data-icon="✅">Em Madrid e Barcelona, o metro cobre quase tudo — evite táxi no centro</li>
-          <li data-icon="⚠️">Uber/Cabify são mais baratos que táxi tradicional em todas as cidades</li>
-          <li data-icon="💡">App Google Maps funciona perfeitamente para rotas de metro e ônibus</li>
-          <li data-icon="💡">Aeroportos: sempre pesquise o ônibus oficial antes de pegar táxi — economia de €20–30</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🔒</div>
-          <div>
-            <div class="dk-card-title">Segurança — batedor de carteira</div>
-            <span class="dk-card-tag safety">Segurança</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="⚠️">Barcelona tem o maior índice de furtos de carteiristas da Europa — desconfie de quem se aproxima em La Rambla</li>
-          <li data-icon="⚠️">Metro Linha 3 (Barcelona) e Las Ramblas: bolsas sempre na frente, nunca no bolso traseiro</li>
-          <li data-icon="⚠️">Em Madrid: Puerta del Sol, Gran Vía e metro L1/L10 são pontos críticos</li>
-          <li data-icon="✅">Carteira mínima na rua — deixe documentos originais no hotel</li>
-          <li data-icon="✅">Pochete de segurança discreta sob a roupa é a melhor solução</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">💶</div>
-          <div>
-            <div class="dk-card-title">Dinheiro e pagamentos</div>
-            <span class="dk-card-tag tip">Economize</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Espanha aceita cartão em quase todo lugar — leve pouco dinheiro em espécie</li>
-          <li data-icon="💡">Caixas eletrônicos: prefira os de bancos (CaixaBank, Santander) — evite os da rua (cobram taxas absurdas)</li>
-          <li data-icon="⚠️">Se o caixa perguntar em qual moeda converter (DCC), sempre escolha <strong>euros</strong> — converter em reais custa +6%</li>
-          <li data-icon="💡">Menu del día: almoço completo com vinho por €12–18 — a melhor relação custo-benefício</li>
-          <li data-icon="✅">Gorjeta não é obrigatória; 5–10% em restaurantes bons é apreciado mas não esperado</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🆘</div>
-          <div>
-            <div class="dk-card-title">Emergências e utilidades</div>
-            <span class="dk-card-tag safety">Emergências</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="🚨">Emergência geral na Espanha: <strong>112</strong> (polícia, bombeiros, SAMU)</li>
-          <li data-icon="🚔">Polícia (Mossos/Nacional): <strong>091</strong> — registrar furto para o seguro</li>
-          <li data-icon="⚠️">Não troque dinheiro em aeroportos ou casas de câmbio na rua — taxas abusivas</li>
-          <li data-icon="💡">Siesta real: muitas lojas e atrações menores fecham das 13h às 17h — planeje as visitas</li>
-          <li data-icon="⚠️">Agosto em Madrid: muitos restaurantes e lojas locais fecham nas férias de verão</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== MADRID ===== -->
-  <div class="dk-city-block">
-    <div class="dk-city-hd m">
-      <div class="dk-ico">🏰</div>
-      <div>
-        <h3>Madrid</h3>
-        <div class="dk-sub">Armadilhas e segredos da capital</div>
-      </div>
-    </div>
-    <div class="dk-cards">
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🎨</div>
-          <div>
-            <div class="dk-card-title">Museus — entradas gratuitas</div>
-            <span class="dk-card-tag ticket">Ingressos</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="🆓">Museu do Prado: gratuito <strong>sextas-feiras das 18h às 20h</strong> — cheio mas vale</li>
-          <li data-icon="🆓">Reina Sofía: gratuito <strong>segundas das 19h às 21h</strong> + domingos das 13h30–19h</li>
-          <li data-icon="🆓">Thyssen-Bornemisza: gratuito <strong>segundas das 12h–16h</strong></li>
-          <li data-icon="💡">Passeio del Arte (€29,60/pessoa): Prado + Reina Sofía + Thyssen — economiza ~€10 por pessoa</li>
-          <li data-icon="⚠️">Nos horários gratuitos há fila; chegar 30 min antes é essencial</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🍖</div>
-          <div>
-            <div class="dk-card-title">Comida — onde e como comer bem</div>
-            <span class="dk-card-tag food">Gastronomia</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="💡">Mercado de San Miguel: bonito para uma taça de vinho, mas os preços são turísticos — não coma aí</li>
-          <li data-icon="✅">Calle Cava Baja (La Latina): a melhor rua de tapas autênticas da cidade</li>
-          <li data-icon="✅">Bodega de la Ardosa (Malasaña): taberna do séc. XIX, vermouth e tapas sem truque</li>
-          <li data-icon="⚠️">Gran Vía e Puerta del Sol: restaurantes com foto no cardápio = armadilha turística, qualidade baixa</li>
-          <li data-icon="💡">Bocadillo de calamares: prato icônico de Madrid — bares em Plaza Mayor (€3–4) são razoáveis</li>
-          <li data-icon="⚠️">Sangria: não é bebida local em Madrid — madrileños bebem vinho, cerveja ou vermute. Pedir sangria é sinalizar turista</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🚌</div>
-          <div>
-            <div class="dk-card-title">Transporte e bairros</div>
-            <span class="dk-card-tag transport">Transporte</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Madrid é extremamente caminhável — do Retiro ao Prado são 10 min a pé</li>
-          <li data-icon="💡">Aeroporto Barajas: metrô Linha 8 até o centro por €5 (bilhete especial aeroporto) — não pegue táxi (€30+)</li>
-          <li data-icon="💡">Malasaña e Lavapiés: bairros autênticos, jovens, sem turista em excesso</li>
-          <li data-icon="⚠️">Domingo: Rastro de Madrid (mercado de pulgas) — magnífico mas lotado e alto risco de pickpocket</li>
-          <li data-icon="💡">El Retiro: vai de manhã cedo para pegar barcos no lago sem fila</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🏟️</div>
-          <div>
-            <div class="dk-card-title">Atrações — o que ninguém conta</div>
-            <span class="dk-card-tag tip">Segredos</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="💡">Bernabéu: o tour pela manhã é mais tranquilo — evite fins de semana com jogo</li>
-          <li data-icon="💡">Palácio Real: acesso à terraça do Jardín de Sabatini tem vista gratuita e incrível</li>
-          <li data-icon="⚠️">Sobrino de Botín (o restaurante mais antigo do mundo): reserva obrigatória, caro mas experiência única</li>
-          <li data-icon="✅">Templo de Debod ao pôr do sol: vista de Madrid e entrada gratuita — um dos mais fotogênicos</li>
-          <li data-icon="💡">Visita a Toledo ou Segóvia saindo de Madrid: €30–40 de trem (1h), vale o dia inteiro</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== VALENCIA ===== -->
-  <div class="dk-city-block">
-    <div class="dk-city-hd v">
-      <div class="dk-ico">🍊</div>
-      <div>
-        <h3>Valencia</h3>
-        <div class="dk-sub">A cidade da paella — como não cair nas armadilhas</div>
-      </div>
-    </div>
-
-    <div class="dk-warn">
-      <strong>⚠️ A regra de ouro da paella em Valencia:</strong> Paella à noite = armadilha turística. Locais autênticos NÃO servem paella no jantar — é prato de almoço. Se você pediu paella às 21h e ficou pronta em 10 minutos, ela veio requentada no <em>paellador</em> (micro-ondas valenciano).
-    </div>
-
-    <div class="dk-cards">
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🥘</div>
-          <div>
-            <div class="dk-card-title">Paella — o guia completo</div>
-            <span class="dk-card-tag food">Gastronomia</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Peça paella <strong>no almoço</strong>, entre 13h30 e 15h</li>
-          <li data-icon="✅">Paella autêntica demora <strong>30–40 minutos</strong> para ser preparada — se chegou rápido, é requentada</li>
-          <li data-icon="✅">Paella valenciana tradicional: frango, coelho, feijão verde e branco — sem frutos do mar (isso é arroz a banda)</li>
-          <li data-icon="⚠️">Evite restaurantes na Praia da Malvarrosa com fotos enormes no cardápio</li>
-          <li data-icon="💡">La Pepica (Malvarrosa) e El Racó de l'Olla (praia del Cabanyal) são autênticos e respeitados pelos locais</li>
-          <li data-icon="💡">Mínimo 2 pessoas para pedir uma paella inteira — peça para 4 se quiser fartura</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🌊</div>
-          <div>
-            <div class="dk-card-title">Barceloneta de Valencia — Praia</div>
-            <span class="dk-card-tag tip">Dica local</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="💡">Praia do El Saler (sul, 15 km): mais tranquila que Malvarrosa, preferida pelos locais</li>
-          <li data-icon="✅">Malvarrosa: vai de bicicleta pelo Jardín del Turia — 5 km de ciclovia sem trânsito</li>
-          <li data-icon="⚠️">Na praia em setembro: ainda quente (28–30°C), mas muito mais vazio que agosto</li>
-          <li data-icon="💡">Aluguel de bicicleta: Valenbisi (bike-sharing) funciona bem — €13/semana</li>
-          <li data-icon="💡">El Cabanyal (bairro da praia): recentemente revitalizado, bares locais ótimos e preço justo</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🏛️</div>
-          <div>
-            <div class="dk-card-title">Cidade das Artes e das Ciências</div>
-            <span class="dk-card-tag ticket">Ingressos</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="💡">A arquitetura de Calatrava é de graça para ver por fora — as fotos mais icônicas não exigem ingresso</li>
-          <li data-icon="✅">Oceanogràfic: maior aquário da Europa — reserve online (€32/pessoa), evita fila</li>
-          <li data-icon="💡">Museu das Ciências Príncipe Felipe (€8): vale a experiência interativa</li>
-          <li data-icon="⚠️">Hemisfèric (planetário): sessões lotam rápido em setembro — compre online</li>
-          <li data-icon="💡">Final de tarde no Jardín del Turia (em frente à CAC): pôr do sol deslumbrante e completamente de graça</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🛍️</div>
-          <div>
-            <div class="dk-card-title">Mercado Central e centro histórico</div>
-            <span class="dk-card-tag tip">Experiência local</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Mercado Central: um dos mais bonitos da Europa — vá de manhã (8h–13h) para ver no auge</li>
-          <li data-icon="💡">Horchata com fartons na Horchatería Santa Catalina (Plaça de Santa Caterina) — obrigatório</li>
-          <li data-icon="✅">Catedral de Valencia: vale pagar para subir a Torre del Micalet — vista 360° da cidade</li>
-          <li data-icon="💡">Barrio del Carmen: o mais animado à noite — bares, grafite e arquitetura medieval misturados</li>
-          <li data-icon="⚠️">Rua Colón e área de El Ensanche: shoppings e comércio, sem muito interesse turístico</li>
-          <li data-icon="⚠️">Restaurantes ao redor da Cidade das Artes e Ciências cobram 40–50% acima da média — busque no bairro de Ruzafa</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== BARCELONA ===== -->
-  <div class="dk-city-block">
-    <div class="dk-city-hd b">
-      <div class="dk-ico">🏛️</div>
-      <div>
-        <h3>Barcelona</h3>
-        <div class="dk-sub">Rota Gaudí, segurança e dicas de locais</div>
-      </div>
-    </div>
-
-    <div class="dk-warn">
-      <strong>⚠️ Sagrada Família + Park Güell — NUNCA compre na bilheteria:</strong> Sempre esgotado. Reserve online com 1–2 semanas de antecedência. Em setembro (alta temporada), quanto antes melhor.
-    </div>
-
-    <div class="dk-cards">
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">⛪</div>
-          <div>
-            <div class="dk-card-title">Sagrada Família — como aproveitar</div>
-            <span class="dk-card-tag ticket">Ingressos &amp; Fotos</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">Reserve online: <a href="https://sagradafamilia.org/en/tickets" class="slink">sagradafamilia.org/en/tickets</a></li>
-          <li data-icon="📷">Melhor ângulo para foto: <strong>Plaça de Gaudí</strong> (o parquinho com lago em frente) — não tire debaixo da torre</li>
-          <li data-icon="💡">Entre pela Fachada da Natividade (Lado Nascente) de manhã — luz natural entra pelos vitrais azuis</li>
-          <li data-icon="💡">Torre da Natividade ou da Paixão? A da Paixão tem fila menor e vista igualmente impressionante</li>
-          <li data-icon="⚠️">Chegue 15 min antes do horário marcado — entrada é estritamente no horário do bilhete</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🌿</div>
-          <div>
-            <div class="dk-card-title">Park Güell — o maior erro dos turistas</div>
-            <span class="dk-card-tag trap">Armadilha</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="⚠️">Não vá de metro + caminhada a pé — a subida é íngreme e extenuante no calor de setembro</li>
-          <li data-icon="✅">Táxi ou carro direto até a <strong>Entrada Carmel</strong> (entrada superior) e desça caminhando — muito mais fácil</li>
-          <li data-icon="✅">Reserve online: <a href="https://parkguell.barcelona/en/buy-tickets" class="slink">parkguell.barcelona/en/buy-tickets</a></li>
-          <li data-icon="💡">Manhã cedo (9h) ou perto do fechamento: menos lotado, luz melhor para fotos</li>
-          <li data-icon="💡">A área fora da zona monumental (gratuita) também é linda — vale explorar antes de entrar</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🌊</div>
-          <div>
-            <div class="dk-card-title">Barceloneta — praia sem armadilha</div>
-            <span class="dk-card-tag trap">Armadilha &amp; Dicas</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="⚠️">Evite os restaurantes das ruas principais da Barceloneta — preços absurdos e qualidade baixa</li>
-          <li data-icon="✅">Busque os <strong>becos internos</strong> (Calle Balboa, Calle Maquinista) para bares e restaurantes dos locais</li>
-          <li data-icon="⚠️">Praia lotada em setembro — chegue antes das 11h para pegar um lugar</li>
-          <li data-icon="⚠️">Alto risco de furto de pertences na praia — nunca deixe objetos sem vigilância na areia</li>
-          <li data-icon="💡">Prefira as praias de Bogatell ou Nova Icária (a leste) — menos lotadas, mais tranquilas</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🚡</div>
-          <div>
-            <div class="dk-card-title">Las Ramblas — a rua mais famosa e perigosa</div>
-            <span class="dk-card-tag safety">Segurança</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="⚠️">A área de Las Ramblas tem o maior índice de pickpocket da Europa — extrema atenção</li>
-          <li data-icon="⚠️">Evite os restaurantes com menus turísticos na Rambla — cara e ruim</li>
-          <li data-icon="✅">La Boqueria: bonito para ver, mas lotado — Mercat de Santa Caterina (Barri Gòtic) é a alternativa local</li>
-          <li data-icon="💡">Paralelo (Carrer del Parlament, Sant Antoni): bairros para comer bem longe do turismo</li>
-          <li data-icon="💡">La Barceloneta a noite é bonita para uma caminhada — segura se estiver em movimento</li>
-          <li data-icon="⚠️">Tapas não são tradicionais em Barcelona — peça pratos locais (patatas bravas, croquetas, pà amb tomàquet)</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🏘️</div>
-          <div>
-            <div class="dk-card-title">Outros pontos Gaudí e arquitetura</div>
-            <span class="dk-card-tag tip">Visitas</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="💡">Casa Batlló: espetacular de noite com o show de luz (€35+) — reserve online com antecedência</li>
-          <li data-icon="💡">Casa Milà (La Pedrera): terraço ao pôr do sol é imperdível — ingresso noturno disponível</li>
-          <li data-icon="✅">Palau de la Música Catalana: tour guiado (€22) mais acessível que concerto — arquitetura incrível</li>
-          <li data-icon="💡">Gràcia e El Born: bairros onde barcelonenses reais vivem, comem e bebem</li>
-          <li data-icon="⚠️">Bunkers del Carmel: melhor pôr do sol de Barcelona — vista 360°, mas suba de táxi (caminhada de 20 min é cansativa com calor)</li>
-        </ul>
-      </div>
-      <div class="dk-card">
-        <div class="dk-card-hd">
-          <div class="dk-card-ico">🚇</div>
-          <div>
-            <div class="dk-card-title">Transporte em Barcelona</div>
-            <span class="dk-card-tag transport">Transporte</span>
-          </div>
-        </div>
-        <ul>
-          <li data-icon="✅">T-Casual (10 viagens, ~€12,15): vale para metro, ônibus e tram — use sempre</li>
-          <li data-icon="💡">Aeroporto El Prat: Aerobus (€6,75) ou metrô Linha 9 (€5,15) — ambos confiáveis</li>
-          <li data-icon="⚠️">Táxi do aeroporto: fixo €39 — OK para 2+ pessoas com bagagem</li>
-          <li data-icon="💡">Barcelona é muito caminhável — Barri Gòtic, Born, Barceloneta e Eixample são todos a pé entre si</li>
-          <li data-icon="💡">Bus Turístic: só vale se quiser descansar — passe de 2 dias (€42) cobre as 3 rotas</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-</div>
-<!-- ======================================================= /DICAS ======================================================= -->
 
 </div><!-- /container -->
 
