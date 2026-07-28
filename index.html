@@ -515,12 +515,22 @@
     .dk-pro { background: #eaf7f0; border-left: 4px solid #27ae60; padding: 14px 18px; border-radius: 8px; margin-bottom: 16px; font-size: .85rem; }
     .dk-pro strong { color: #1a7a5e; }
     .dk-source { font-size: .73rem; color: #aaa; margin-top: 10px; font-style: italic; }
+
+    /* ===== VISIT CHECKBOX ===== */
+    .tl-row { position: relative; }
+    .visit-cb { position: absolute; right: 0; top: 8px; display: flex; align-items: center; gap: 6px; z-index: 10; }
+    .visit-cb input[type=checkbox] { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; background: #fff; flex-shrink: 0; transition: all .15s; }
+    .visit-cb input[type=checkbox]:checked { background: #27ae60; border-color: #27ae60; }
+    .visit-cb input[type=checkbox]:checked::after { content: '✓'; display: block; color: #fff; font-size: 13px; font-weight: 700; text-align: center; line-height: 16px; }
+    .tl-row.visited .tl-name { text-decoration: line-through; color: #aaa; }
+    .tl-row.visited .tl-dot { opacity: .35; }
+    .tl-row.visited .tl-time { color: #ccc; }
   </style>
 </head>
 <body>
 
 <div style="background:#1c2541;color:#aaa;text-align:center;font-size:.75rem;padding:6px;letter-spacing:.3px;">
-  🔄 Última atualização: <strong style="color:#fff;">28/07/2026 às 15h31</strong>
+  🔄 Última atualização: <strong style="color:#fff;">28/07/2026 às 15h33</strong>
 </div>
 <div class="hero">
   <h1>🇪🇸 Espanha — Setembro 2026</h1>
@@ -1553,7 +1563,7 @@
     </div>
 
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_1">
         <div class="tl-time">10h45</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="tl-name">✈️ Aeroporto Barajas (MAD) — Chegada</div>
@@ -1564,7 +1574,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_2">
         <div class="tl-time">~12h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L8 (rosa) → Nuevos Ministerios → L10/L1 → Sol · ~40 min · €7,50/pessoa (tarifa especial aeroporto)</div>
@@ -1577,7 +1587,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_3">
         <div class="tl-time">15h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min a pé do hotel · 150m</div>
@@ -1591,7 +1601,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_4">
         <div class="tl-time">16h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min da Plaza Mayor · 200m</div>
@@ -1604,7 +1614,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_5">
         <div class="tl-time">16h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 20 min a pé · 1,8 km pela C/ de Alcalá · ou 🚇 Metro L1: Sol → Retiro · 2 paradas · 5 min</div>
@@ -1618,7 +1628,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_6">
         <div class="tl-time">19h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 20 min a pé · 1,5 km pela C/ de Alcalá em sentido oeste · ou 🚇 Metro L2: Retiro → Banco de España · 3 min</div>
@@ -1632,7 +1642,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_7">
         <div class="tl-time">20h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · 400m da Gran Vía pela C/ de la Palma / C/ Fuencarral em direção norte</div>
@@ -1679,7 +1689,7 @@
     </div>
 
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_8">
         <div class="tl-time">9h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min do hotel · 150m</div>
@@ -1694,7 +1704,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_9">
         <div class="tl-time">10h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 1 min do Mercado de San Miguel · 100m</div>
@@ -1707,7 +1717,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_10">
         <div class="tl-time">10h15</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · 400m pela C/ Mayor em direção ao Palácio</div>
@@ -1720,7 +1730,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_11">
         <div class="tl-time">12h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min ao lado da Almudena · 100m</div>
@@ -1733,7 +1743,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_12">
         <div class="tl-time">15h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min — ao lado norte do Palácio · 100m</div>
@@ -1747,7 +1757,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_13">
         <div class="tl-time">15h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé · 850m sentido sul pela C/ Bailén → La Latina</div>
@@ -1762,7 +1772,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_14">
         <div class="tl-time">19h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L5: La Latina → Callao · 3 paradas · 5 min + 🚶 25 min (2 km) até o Parque del Oeste · ou 🚶 40 min direto (3 km) de La Latina</div>
@@ -1804,7 +1814,7 @@
     </div>
 
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_15">
         <div class="tl-time">10h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1: Sol → Atocha Renfe · 1 parada · 4 min + 5 min a pé · ou 🚶 22 min (1,9 km pela C/ de Alcalá)</div>
@@ -1820,7 +1830,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_16">
         <div class="tl-time">12h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · 350m do Reina Sofía</div>
@@ -1834,7 +1844,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_17">
         <div class="tl-time">14h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · 350m — o bairro começa logo ao norte do mercado</div>
@@ -1852,7 +1862,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_18">
         <div class="tl-time">15h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · 400m do Barrio de las Letras — Prado e Botánico são vizinhos</div>
@@ -1867,7 +1877,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_19">
         <div class="tl-time">15h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min — Botánico e Prado são porta a porta · 100m</div>
@@ -1880,7 +1890,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_20">
         <div class="tl-time">17h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé · 700m norte pelo Paseo del Prado</div>
@@ -1907,7 +1917,7 @@
       <div class="cost-badge">~€144<span class="rbrl">R$893 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_21">
         <div class="tl-time">08h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1: Sol → Atocha · 1 parada · 4 min · ~1,5 km · Chegue 20–25 min antes do trem</div>
@@ -1920,7 +1930,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_22">
         <div class="tl-time">09h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé da estação subindo para o centro histórico (700m)</div>
@@ -1931,7 +1941,7 @@
           <p class="tl-note">Chegue sem pressa à Plaza Zocodover — a praça central de Toledo desde a Idade Média. Um café e uma tostada nos bares ao redor antes do tour é o jeito certo de começar o dia.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_23">
         <div class="tl-time">11h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 15 min a pé da estação · 1,1 km subindo ao centro · ponto de encontro: Plaza de Zocodover</div>
@@ -1943,7 +1953,7 @@
           <p class="tl-note">Tour guiado pela cidade que foi capital da Espanha cristã, islâmica e judaica ao mesmo tempo. Percorre a Catedral Primada, o bairro judeu (El Call), a Mesquita do Cristo da Luz e os mirantes sobre o rio Tejo — com contexto histórico que transforma a visita numa experiência muito mais rica do que caminhar sozinho.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_24">
         <div class="tl-time">13h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 próximo ao ponto final do tour</div>
@@ -1954,7 +1964,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_25">
         <div class="tl-time">15h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="tl-name">🌿 Tarde livre — descobertas em Toledo</div>
@@ -1964,7 +1974,7 @@
           <p class="tl-note">O tour da manhã já cobre os principais pontos históricos — a tarde é para explorar no próprio ritmo: becos medievais, ateliês de espadas toledanas, lojas de mazapão artesanal e os mirantes sobre o Tejo ao entardecer.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_26">
         <div class="tl-time"></div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="tl-name">💡 Sugestões para a tarde <span class="tag sugest">✨ Sugestões</span></div>
@@ -1977,7 +1987,7 @@
           </ul>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_27">
         <div class="tl-time">19h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 15 min a pé · 1,3 km de volta à estação de Toledo</div>
@@ -2042,7 +2052,7 @@
     </div>
 
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_28">
         <div class="tl-time">9h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L5: La Latina · 1,2 km · ou 🚶 15 min do hotel · ⚠️ Só funciona aos domingos!</div>
@@ -2058,7 +2068,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_29">
         <div class="tl-time">13h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · 400m — o Rastro é exatamente em La Latina</div>
@@ -2072,7 +2082,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_30">
         <div class="tl-time">15h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L5: La Latina → Callao · 4 paradas · 7 min · ~3 km</div>
@@ -2088,7 +2098,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_31">
         <div class="tl-time">16h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 15 min a pé · 1,3 km pela C/ de Alcalá sentido leste</div>
@@ -2103,7 +2113,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_32">
         <div class="tl-time">17h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé · 600m pela C/ de Alcalá para leste</div>
@@ -2117,7 +2127,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_33">
         <div class="tl-time">18h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 20 min · 1,5 km pela C/ de Alcalá de volta para oeste · ou 🚇 Metro L2: Retiro → Gran Vía · 4 paradas · 6 min</div>
@@ -2131,7 +2141,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_34">
         <div class="tl-time">19h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min · 900m pela Gran Vía sentido oeste até o final da avenida</div>
@@ -2145,7 +2155,7 @@
         </div>
       </div>
 
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_35">
         <div class="tl-time">21h</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · 450m do restaurante ao hotel, subindo pela Plaza Mayor</div>
@@ -2171,14 +2181,14 @@
       <div class="cost-badge">~€80<span class="rbrl">R$496 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_36">
         <div class="tl-time">08h30</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="tl-name">☕ Café da manhã + check-out no hotel</div>
           <div class="tags"><span class="tag tp">💡 Deixe as malas na recepção se o check-out for antes da hora do trem</span></div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_37">
         <div class="tl-time">09h42</div><div class="tl-dot m"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1: Sol → Atocha · 1 parada · 4 min · ~1,5 km · Chegue 30 min antes do trem</div>
@@ -2189,7 +2199,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_38">
         <div class="tl-time">11h43</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé da estação Joaquín Sorolla ao hotel na Plaza del Ayuntamiento (850m pela C/ de la Xàtiva)</div>
@@ -2319,7 +2329,7 @@
       <div class="cost-badge">~€70<span class="rbrl">R$434 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_39">
         <div class="tl-time">11h43</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé da estação Joaquín Sorolla · 850m pela C/ de la Xàtiva → Plaza Ayuntamiento</div>
@@ -2327,7 +2337,7 @@
           <div class="tags"><span class="tag tp">💡 Plaza del Ayuntamiento, 3 — no coração da Cidade Velha, a 400m do Mercado Central</span></div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_40">
         <div class="tl-time">13h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé do hotel · 400m pela C/ de Sant Vicent Màrtir — hotel está na Plaza Ayuntamiento!</div>
@@ -2341,7 +2351,7 @@
           <p class="tl-note">Um dos mercados de alimentos mais belos do mundo — construído em 1928 no estilo modernista valenciano, com azulejos, ferro forjado e vitrais. Mais de 1.200 barracas de frutas, legumes, carnes e peixes frescos do Mediterrâneo. Prove a horchata com fartons diretamente nas bancas, experimente as ostras e o pão com azeite valenciano.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_41">
         <div class="tl-time">14h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min a pé do Mercado · 150m — o centro histórico começa na porta ao lado</div>
@@ -2353,7 +2363,7 @@
           <p class="tl-note">A pé do Mercado Central, o centro histórico revela a escala humana de Valencia: a Plaza de la Reina com terraços ao sol, a fachada barroca da Catedral vista de longe, as ruas comerciais da C/ de la Paz e o movimento da Plaza del Ayuntamiento. Ótimo momento para um café ou sorvete enquanto absorve a cidade.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_42">
         <div class="tl-time">16h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé do centro histórico · 800m pela C/ dels Serrans até o coração do bairro</div>
@@ -2365,7 +2375,7 @@
           <p class="tl-note">El Carmen é construído sobre os alicerces da cidade mourisca do séc. VIII — arcos medievais, ruelas estreitas e as melhores pinturas de rua de toda a cidade. Passeio ideal para um primeiro contato com Valencia: sem pressão de horários, apenas absorver a atmosfera. Procure o Jardim Secreto (Jardín del Turia velho) e os murais na Plaça del Tossal.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_43">
         <div class="tl-time">16h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé dentro do bairro · ~350m pela C/ dels Cavallers</div>
@@ -2378,7 +2388,7 @@
           <p class="tl-note">Construída no séc. XIII, a Igreja de San Nicolás passou por uma transformação barroca no séc. XVII que resultou em um dos interiores mais deslumbrantes de toda a Espanha. Seu teto é coberto por afrescos de Antonio Palomino — cerca de 1.000 m² de pinturas celestiais que lhe renderam o apelido de "Capela Sistina Valenciana". Fica no coração do Barrio del Carmen, a poucos metros das ruelas medievais.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_44">
         <div class="tl-time">17h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 8 min a pé de El Carmen · 600m pela C/ dels Serrans → Pza. Santa Catalina</div>
@@ -2390,7 +2400,7 @@
           <p class="tl-note">A horchata valenciana (feita de chufa) não existe em nenhum outro lugar do mundo com esse sabor — gelada, cremosa e naturalmente adocicada. Sirva com fartons no salão histórico de azulejos em funcionamento desde 1836. Uma experiência gastronômica que define Valencia tanto quanto a paella.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_45">
         <div class="tl-time">20h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 3 min a pé · 250m da Horchatería até a Plaza Ayuntamiento</div>
@@ -2410,7 +2420,7 @@
       <div class="cost-badge">~€120<span class="rbrl">R$744 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_46">
         <div class="tl-time">09h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚌 Bus 35/95 do hotel · ~20 min · ~3,5 km · ou 🚕 Uber ~10 min</div>
@@ -2424,7 +2434,7 @@
           <p class="tl-note">O complexo de Calatrava — com o Hemisfèric, Palau de les Arts e Museu de les Ciències — é uma das obras arquitetônicas mais impressionantes do séc. XXI. Apreciar os edifícios por fora já vale muito e é gratuito. Se quiser entrar em algum pavilhão, compre o ingresso na hora diretamente na bilheteria. 💡 <em>Lanche rápido disponível no complexo ou nos arredores antes de continuar.</em></p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_47">
         <div class="tl-time">14h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min a pé · ~150m — o Jardim do Turia começa imediatamente ao lado da CAS</div>
@@ -2437,7 +2447,7 @@
           <p class="tl-note">Em 1957, uma enchente catastrófica destruiu Valencia. Em vez de reconstruir o canal, os valencianos desviaram o rio e transformaram o antigo leito de 9 km em um parque linear verde no centro da cidade. Caminhe pelo parque da CAS até o centro histórico — 4 km de percurso verde, sem trânsito, passando pelo Parque Gulliver e Palau de la Música. Uma das melhores formas de chegar ao centro.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_48">
         <div class="tl-time">15h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 3 min a pé do Jardim do Turia · ~200m pela C/ del Almirall → Plaza de la Reina</div>
@@ -2450,7 +2460,7 @@
           <p class="tl-note">Construída entre 1262 e 1482, a catedral guarda o que muitos historiadores consideram o Santo Graal — um cálice de ágata do séc. I. A mistura de estilos (gótico, românico e barroco) conta a história de séculos de construção. Suba os 207 degraus da Torre El Micalet para uma das melhores vistas panorâmicas de Valencia ao entardecer.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_49">
         <div class="tl-time">16h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 3 min a pé · ~350m da Catedral pela C/ dels Cavallers</div>
@@ -2462,7 +2472,7 @@
           <p class="tl-note">Obra-prima do Gótico Civil valenciano do séc. XV, Patrimônio Mundial da UNESCO. As colunas helicoidais da Sala de Contratación — torcidas como palmeiras — são únicas na arquitetura medieval mundial e simbolizam o poder comercial de Valencia na Idade Média, quando era o maior porto do Mediterrâneo Ocidental.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_50">
         <div class="tl-time">20h</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé do hotel · 400m pela C/ de Sant Vicent Màrtir</div>
@@ -2486,14 +2496,14 @@
       <div class="cost-badge">~€20<span class="rbrl">R$124 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_51">
         <div class="tl-time">07h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="tl-name">☕ Café da manhã rápido no hotel + check-out</div>
           <div class="tags"><span class="tag tp">💡 Deixe as malas na recepção se precisar sair antes do check-out oficial</span></div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_52">
         <div class="tl-time">08h30</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 7 min a pé do hotel · 500m pela C/ de Xàtiva até a Estação Valencia Nord</div>
@@ -2501,7 +2511,7 @@
           <div class="tags"><span class="tag tp">💡 Chegue com 30 min de antecedência · Estação a 500m do hotel!</span></div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_53">
         <div class="tl-time">09h06</div><div class="tl-dot v"></div>
         <div class="tl-info">
           <div class="tl-name">🚄 Valencia Nord → Barcelona Sants <span class="tag comprado">✅ COMPRADO</span></div>
@@ -2511,7 +2521,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_54">
         <div class="tl-time">12h12</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L3 de Sants: ~10–15 min · ~2,5 km ao Eixample · Compre T-Casual 10 viagens: €11,35</div>
@@ -2597,7 +2607,7 @@
       <div class="cost-badge">~€135<span class="rbrl">R$837 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_55">
         <div class="tl-time">12h12</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L3 (Sants Estació → Urgell): ~10 min · Ibis Styles Barcelona Centre fica ~500m da saída Urgell (L1)</div>
@@ -2605,7 +2615,7 @@
           <div class="tags"><span class="tag tp">💡 Gran Via de les Corts Catalanes · Eixample · Metro L1/L2 (Urgell) a poucos passos</span></div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_56">
         <div class="tl-time">14h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · ~400m do hotel pela C/ de Mallorca</div>
@@ -2616,7 +2626,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_57">
         <div class="tl-time">15h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 8 min a pé · ~700m do hotel subindo pelo Eixample</div>
@@ -2625,7 +2635,7 @@
           <p class="tl-note">Três obras-primas do Modernismo Catalão na mesma quadra: Casa Batlló (Gaudí), Casa Amatller e Casa Lleó Morera. Perfeita primeira impressão de Barcelona — você visitará os interiores amanhã. <strong>⏰ Melhor horário: ao entardecer (19h–21h)</strong> quando as fachadas ganham iluminação especial.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_58">
         <div class="tl-time">20h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1 (Urgell → Jaume I via Universitat + L3): ~12 min</div>
@@ -2648,7 +2658,7 @@
       <div class="cost-badge">~€290<span class="rbrl">R$1.798 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_59">
         <div class="tl-time">09h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 15 min a pé · ~1,3 km do hotel subindo pela C/ de Muntaner até o Passeig de Gràcia</div>
@@ -2661,7 +2671,7 @@
           <p class="tl-note">A última obra civil de Gaudí (1910). O terraço com chaminés revestidas de mosaico branco em espiral — as "guerreiras" — é uma das criações mais originais da arquitetura mundial. Audioguia incluído. Reserve ~1h30. <strong>⏰ Abertura (09h)</strong> para o terraço sem fila.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_60">
         <div class="tl-time">11h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L3/L5 (Diagonal → Sagrada Família): ~8 min · ou 🚶 20 min pela C/ de Provença</div>
@@ -2674,7 +2684,7 @@
           <p class="tl-note">Patrimônio UNESCO de Domènech i Montaner (1901–1930). 27 pavilhões interligados por túneis, cada um revestido de mosaicos e esculturas art nouveau únicos. Muito menos visitado que a Sagrada Família, a poucos minutos a pé. Reserve ~1h.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_61">
         <div class="tl-time">12h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m do Sant Pau até a Sagrada Família pela Av. de Gaudí</div>
@@ -2685,7 +2695,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_62">
         <div class="tl-time">13h15</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~350m do restaurante até a entrada da Sagrada Família</div>
@@ -2697,7 +2707,7 @@
           <p class="tl-note">Tour guiado em espanhol pela nave central, fachadas da Natividade e Paixão, claustro e detalhes arquitetônicos. O guia revela os símbolos escondidos e a visão de Gaudí para a basílica. Duração ~1h. <strong>Chegue 15 min antes</strong> para passar pelo controle de ingressos sem pressa.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_63">
         <div class="tl-time">14h45</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🏛️ Dentro da Sagrada Família — acesso direto pelo elevador da Torre da Natividade</div>
@@ -2709,7 +2719,7 @@
           <p class="tl-note">Vista panorâmica 360° de Barcelona do alto da Torre da Natividade — mar Mediterrâneo, Tibidabo, Montjuïc e a cidade toda. O elevador sobe em segundos; a descida pode ser feita pelas escadas em espiral. <strong>Duração ~45 min.</strong></p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_64">
         <div class="tl-time">16h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🏛️ Dentro ou nas imediações da Sagrada Família</div>
@@ -2719,7 +2729,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_65">
         <div class="tl-time">17h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🏛️ Dentro da Sagrada Família — experiência incluída no ingresso</div>
@@ -2731,7 +2741,7 @@
           <p class="tl-note">A hora mais mágica dentro da Sagrada Família — às 17h o sol poente atravessa os vitrais do lado oeste em tons âmbar e vermelho, enquanto o lado leste já resfria em azuis e verdes. A experiência cromática da nave central neste horário é absolutamente extraordinária e única no mundo. <strong>Não perca este momento.</strong></p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_66">
         <div class="tl-time">18h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L5 (Sagrada Família → Diagonal): ~8 min · ou 🚶 20 min pela C/ de Provença</div>
@@ -2740,7 +2750,7 @@
           <p class="tl-note">Aproveite o entardecer no Passeig de Gràcia — a melhor hora para fotografar a Casa Batlló com a iluminação natural dourada nas escamas de mosaico azul da fachada.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_67">
         <div class="tl-time">19h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min · ~200m pelo Passeig de Gràcia</div>
@@ -2767,7 +2777,7 @@
       <div class="cost-badge">~€120<span class="rbrl">R$744 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_68">
         <div class="tl-time">09h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚌 Bus 116 de Plaça Catalunya · ~20 min · ou 🚇 Metro L3 (Vallcarca) + 🚶 15 min subindo</div>
@@ -2780,7 +2790,7 @@
           <p class="tl-note">Projeto de 1900 de Gaudí: a esplanada com o banco em mosaico colorido (trencadís), as colunas dóricas e o terraço com vista 360° sobre Barcelona e o Mediterrâneo. O dragão de mosaico na entrada é um dos ícones mais fotografados da Espanha. <strong>⏰ 09h de manhã</strong> — luz dourada e esplanada sem lotação. Evite 11h–13h.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_69">
         <div class="tl-time">11h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 20 min a pé · ~1,8 km subindo a colina do Carmel (íngreme, a vista recompensa)</div>
@@ -2791,7 +2801,7 @@
           <p class="tl-note">Mirante 360° num bunker antiaéreo da Guerra Civil Espanhola (1938). Vistas sobre toda a cidade — Sagrada Família, Tibidabo, mar Mediterrâneo — sem nenhum obstáculo. Frequentado pelos barceloneses locais, praticamente desconhecido pelos roteiros turísticos. <strong>⏰ Pela manhã</strong> para fotografar a cidade bem iluminada.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_70">
         <div class="tl-time">13h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚌 Bus 119 descendo para Gràcia · ~20 min</div>
@@ -2802,7 +2812,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_71">
         <div class="tl-time">14h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m dentro do bairro de Gràcia</div>
@@ -2811,7 +2821,7 @@
           <p class="tl-note">O bairro mais autêntico de Barcelona. Praças animadas (Plaça del Sol, Plaça de la Vila de Gràcia), cafés independentes e uma vida de bairro que contrasta com o turismo intenso do centro. <strong>⏰ 15h–17h</strong> para os cafés e as praças animadas.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_72">
         <div class="tl-time">16h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min a pé · ~800m subindo pelo bairro de Gràcia</div>
@@ -2837,7 +2847,7 @@
       <div class="cost-badge">~€140<span class="rbrl">R$868 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_73">
         <div class="tl-time">09h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1 (Urgell → Universitat) + L3 (Universitat → Liceu): ~12 min · ~2 km · ou 🚶 ~25 min</div>
@@ -2851,7 +2861,7 @@
           <p class="tl-note">Catedral gótica do séc. XIII com claustro ajardinado abrigando 13 patos brancos — um para cada ano de vida de Santa Eulàlia. Suba ao terraço (€3) para vista singular sobre os telhados medievais. <strong>⏰ 9h30</strong> — entrada gratuita e claustro tranquilo.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_74">
         <div class="tl-time">10h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m da Catedral até as Ramblas (pela C/ de la Boqueria)</div>
@@ -2863,7 +2873,7 @@
           <p class="tl-note">O boulevard mais famoso da Espanha — 1,2 km do Plaça Catalunya ao monumento de Colombo. Faça o trajeto completo e admire a arquitetura, mas não coma nas barracas da calçada.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_75">
         <div class="tl-time">12h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min · ~150m pelas Ramblas — a Boqueria fica na lateral</div>
@@ -2875,7 +2885,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_76">
         <div class="tl-time">13h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m descendo as Ramblas em direção ao mar</div>
@@ -2888,7 +2898,7 @@
           <p class="tl-note">Primeira grande obra de Gaudí em Barcelona (1890) para a família Güell. Terraço com chaminés de mosaico multicolorido, teto com claraboia estrelada, estruturas parabólicas. Muito menos visitado que as outras obras de Gaudí. <strong>⏰ 13h</strong> — luz zenital no teto estrelado e menor movimento.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_77">
         <div class="tl-time">14h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~350m (pela C/ de la Unió)</div>
@@ -2899,7 +2909,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_78">
         <div class="tl-time">16h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min · ~850m pelo Barri Gòtic (pela C/ de la Princesa)</div>
@@ -2910,7 +2920,7 @@
           <p class="tl-note">El Born — galerias, design independente, bares de vinho natural. Santa Maria del Mar (séc. XIV) é a basílica gótica mais pura de Barcelona, construída pelos pescadores em 55 anos. <strong>⏰ Entardecer (18h–21h)</strong> para o movimento dos bares.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_79">
         <div class="tl-time">20h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min · ~150m de Santa Maria del Mar</div>
@@ -2933,7 +2943,7 @@
       <div class="cost-badge">~€95<span class="rbrl">R$589 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_80">
         <div class="tl-time">09h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1 (Urgell → Espanya): ~6 min</div>
@@ -2942,7 +2952,7 @@
           <p class="tl-note">Suba pelas escadas rolantes da Av. de la Reina Maria Cristina — uma das perspectivas mais grandiosas de Barcelona, com as duas torres de 47m e o MNAC ao fundo.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_81">
         <div class="tl-time">10h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚡 Escadas rolantes · ~10 min subindo</div>
@@ -2956,7 +2966,7 @@
           <p class="tl-note">A maior coleção de arte românica do mundo (séc. X–XIII). Afrescos inteiros arrancados de igrejas medievais dos Pirineus e reinstalados nos ábsides originais — uma técnica única no mundo. Do terraço exterior, vista 360° sobre Barcelona. Reserve ~1h30.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_82">
         <div class="tl-time">12h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L3 (Espanya → Liceu): ~10 min</div>
@@ -2967,7 +2977,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_83">
         <div class="tl-time">14h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m do Raval até o Barri Gòtic (pela C/ de la Boqueria)</div>
@@ -2976,7 +2986,7 @@
           <p class="tl-note">2.000 anos de história em ruas medievais: o Pont del Bisbe (a ponte neogótica mais fotografada de Barcelona), a Plaça Reial com lanternas projetadas pelo jovem Gaudí, e ruínas romanas do séc. I visíveis pelo chão de vidro na Plaça del Rei. <strong>⏰ Tarde de domingo</strong> — bairro mais tranquilo que nos dias de semana.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_84">
         <div class="tl-time">16h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 3 min · ~250m do Barri Gòtic</div>
@@ -2997,7 +3007,7 @@
       <div class="cost-badge">~€155<span class="rbrl">R$961 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_85">
         <div class="tl-time">09h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1 (Urgell → Espanya): ~6 min · ~1,8 km do hotel</div>
@@ -3006,7 +3016,7 @@
           <p class="tl-note">Praça monumental da Exposição Internacional de 1929 — duas torres de 47 metros flanqueiam a Av. de la Reina Maria Cristina. Um dos cenários mais imponentes de Barcelona.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_86">
         <div class="tl-time">10h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚡 Escadas rolantes da Av. Reina Maria Cristina · ~10 min subindo</div>
@@ -3019,7 +3029,7 @@
           <p class="tl-note">Construído para a Exposição de 1929 — réplicas de monumentos e arquiteturas de todas as regiões da Espanha. Artesãos, restaurantes e bares. Uma visita cultural e gastronômica que a maioria dos turistas ignora. <strong>⏰ 10h</strong> para os artesãos ativos.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_87">
         <div class="tl-time">12h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚡 Funicular de Montjuïc (subida) · 5 min + 🚡 Teleférico: 5 min</div>
@@ -3032,7 +3042,7 @@
           <p class="tl-note">O Teleférico sobe em 5 minutos até o topo com vista aérea sobre o porto. O Castelo de Montjuïc (séc. XVII) tem vista 360° sobre o Mediterrâneo. <strong>⏰ 1h antes do pôr do sol</strong> — luz dourada sobre o porto.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_88">
         <div class="tl-time">14h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚡 Funicular descendo · 5 min + 🚶 5 min ao Poble Sec</div>
@@ -3043,7 +3053,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_89">
         <div class="tl-time">16h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 3 min · Carrer de Blai fica no Poble Sec, a passos do Quimet</div>
@@ -3055,7 +3065,7 @@
           <p class="tl-note">Uma rua inteira de bares servindo pintxos a €1,50–2,50 cada. O ritual: entre, pegue um pratinho, escolha e pague no final. Mude de bar e repita. <strong>⏰ 19h–21h</strong> — pintxos quentes recém-feitos.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_90">
         <div class="tl-time">21h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L2 (Paral·lel → Urgell): ~12 min</div>
@@ -3081,7 +3091,7 @@
       <div class="cost-badge">~€210<span class="rbrl">R$1.302 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_91">
         <div class="tl-time">09h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚇 Metro L1 (Urgell → Jaume I via Universitat + L3): ~12 min</div>
@@ -3091,7 +3101,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_92">
         <div class="tl-time">10h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 8 min · ~600m do Gótico — C/ dels Arcs → C/ de la Princesa</div>
@@ -3105,7 +3115,7 @@
           <p class="tl-note">Obra-prima do Modernismo Catalão (1908, Patrimônio UNESCO). O vitral central — flor invertida de 2.000 peças de vidro com 10 metros de diâmetro — é uma das maiores obras de Art Nouveau do mundo. <strong>⏰ 10h (abertura)</strong> para a luz natural atravessando o vitral.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_93">
         <div class="tl-time">11h15</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m do Palau até o Museu Picasso (pela C/ dels Carders)</div>
@@ -3118,7 +3128,7 @@
           <p class="tl-note">4.251 obras em 5 palácios medievais interligados do séc. XV. A série "Las Meninas" (58 releituras do quadro de Velázquez, 1957) é um dos conjuntos artísticos mais fascinantes do mundo. Reserve ~1h30.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_94">
         <div class="tl-time">13h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min · ~150m do Picasso</div>
@@ -3129,7 +3139,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_95">
         <div class="tl-time">14h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 2 min · ~100m no próprio bairro</div>
@@ -3138,7 +3148,7 @@
           <p class="tl-note">C/ del Rec e C/ de la Ribera para lojas de design independente, souvenirs de qualidade e galerias. El Born à tarde tem clima perfeito: tranquilo e autêntico.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_96">
         <div class="tl-time">16h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 10 min · ~850m do Born sentido sul (pela C/ del Comerç)</div>
@@ -3150,7 +3160,7 @@
           <p class="tl-note">4 km de praia de areia fina a 10 min a pé do centro histórico. Setembro é o melhor mês — multidão menor que agosto, água ainda quente. A Praia de Sant Sebastià, na extremidade sul, é a mais tranquila.</p>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_97">
         <div class="tl-time">20h30</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min · ~400m pela Barceloneta até o Born</div>
@@ -3174,7 +3184,7 @@
       <div class="cost-badge">~€50<span class="rbrl">R$310 (2 pessoas)</span></div>
     </div>
     <div class="tl">
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_98">
         <div class="tl-time">08h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 do hotel · ~5 min a pé</div>
@@ -3184,7 +3194,7 @@
           </div>
         </div>
       </div>
-      <div class="tl-row">
+      <div class="tl-row" data-visit="visit_99">
         <div class="tl-time">09h</div><div class="tl-dot b"></div>
         <div class="tl-info">
           <div class="transit-from">🚶 5 min a pé · ~400m do hotel até Plaça Catalunya · Aerobús sai a cada 5 min</div>
@@ -3595,6 +3605,40 @@
       hd.addEventListener('click', function() {
         card.classList.toggle('collapsed');
       });
+    });
+  });
+
+  /* ===== VISIT CHECKBOXES ===== */
+  const VISIT_KEY = 'espanha2026_visit';
+
+  function visitLoad() {
+    try { return JSON.parse(localStorage.getItem(VISIT_KEY)) || {}; } catch(e) { return {}; }
+  }
+  function visitSave(s) { localStorage.setItem(VISIT_KEY, JSON.stringify(s)); }
+
+  function visitToggle(uid, cb) {
+    var s = visitLoad();
+    s[uid] = cb.checked;
+    visitSave(s);
+    var row = cb.closest('.tl-row');
+    row.classList.toggle('visited', cb.checked);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var s = visitLoad();
+    document.querySelectorAll('.tl-row[data-visit]').forEach(function(row) {
+      var uid = row.dataset.visit;
+      // inject checkbox
+      var wrap = document.createElement('div');
+      wrap.className = 'visit-cb';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.title = 'Marcar como visitado';
+      cb.checked = !!s[uid];
+      cb.addEventListener('change', function() { visitToggle(uid, cb); });
+      wrap.appendChild(cb);
+      row.appendChild(wrap);
+      if (cb.checked) row.classList.add('visited');
     });
   });
 </script>
